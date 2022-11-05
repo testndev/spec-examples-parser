@@ -1,17 +1,20 @@
 {
   "name": "@testndev/spec-examples-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Specification examples parser for Javascript tests",
-  "repository": {"url": "https://github.com/testndev/spec-examples-parser"},
+  "repository": {
+    "url": "https://github.com/testndev/spec-examples-parser"
+  },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": " npx playwright test"
-
   },
   "author": {
     "email": "alhusaine@testndev.com",
