@@ -41,20 +41,6 @@ examples.fromGherkinFormatTable(`
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Development
 
 <details>
@@ -63,20 +49,16 @@ examples.fromGherkinFormatTable(`
 
 
 Setting up:
+
 ```bash
 git clone git@github.com:testndev/spec-examples-parser.git
 cd @testndev/spec-examples-parser
 npm install
 ```
-Testing in production environment:
+Testing:
+
 ```bash
 npm run test
 ```
 
 </details>
-
-
-<!---
-Readme generated with tldw v7.3.1
-https://github.com/Jaid/tldw
--->
