@@ -1,8 +1,10 @@
 # @testndev/spec-examples-parser
 
+![License](https://img.shields.io/github/license/testndev/spec-examples-parser)
+![NPM Downloads](https://img.shields.io/npm/dw/@testndev/spec-examples-parser)
 
-<a href="https://raw.githubusercontent.com/testndev/spec-examples-parser/main/license.txt"><img src="https://img.shields.io/github/license/testndev/spec-examples-parser" alt="License"/></a>   
- <a href="https://github.com/testndev/spec-examples-parser/commits"><img src="https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/testndev/spec-examples-parser/issues"><img src="https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Issues"/></a>  
+![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)
+![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)
 
 **Specification examples parser for Javascript tests**
 
