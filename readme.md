@@ -2,7 +2,7 @@
 
 
 <a href="https://raw.githubusercontent.com/testndev/spec-examples-parser/main/license.txt"><img src="https://img.shields.io/github/license/testndev/spec-examples-parser?style=flat-square" alt="License"/></a>   
- <a href="https://github.com/testndev/spec-examples-parser/commits"><img src="https://img.shields.io/github/commits-since/testndev/spec-examples-parser/v0.1.0?style=flat-square&logo=github" alt="Commits since v0.1.0"/></a> <a href="https://github.com/testndev/spec-examples-parser/commits"><img src="https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/testndev/spec-examples-parser/issues"><img src="https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Issues"/></a>  
+ <a href="https://github.com/testndev/spec-examples-parser/commits"><img src="https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/testndev/spec-examples-parser/issues"><img src="https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github" alt="Issues"/></a>  
 
 **Specification examples parser for Javascript tests**
 
