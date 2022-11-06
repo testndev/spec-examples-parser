@@ -6,19 +6,20 @@
 ![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)
 ![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)
 
-**Specification examples parser for Javascript tests**
+**Specification examples parser for TypeScript tests**
 
+A simple parser that turns specification examples (*Gherkin* style text, CSV...) into treatable array of objects, for your TypeScript tests.
 
-A simple parser that turns specification examples into treatable array, for your Javascript tests.
-
+Tested with those testing frameworks:
+- [Jest](https://jestjs.io/)
+- [Mocha](https://mochajs.org/)
+- [Playwright](https://playwright.dev/)
 
 ## Samples
 
-See complete and detailed samples in ... (WIP! in new repo) 
+> See complete and detailed samples in https://github.com/testndev/spec-examples-parser-samples
   
-Here a sample using Jest framework.
-
-With file named `greetingsLocalFormats.spec.ts` containing:
+Let's see a first sample using [Jest](https://jestjs.io/), with TypeScript test file containing:
 
 ```typescript
 import { describe, expect, test } from '@jest/globals';
@@ -42,10 +43,9 @@ describe(`Our_App respects local greetings formats for supported languages`, () 
 });
 ```
 
-executing test file will return in terminal: 
+executing this test will return in terminal: 
 
 ```
- PASS  ./greetingsLocalFormats.spec.ts
   Our_App respects local greetings formats for supported languages
     √ Our_App says "Bonjour Sébastien !" to "Sébastien" in "french" (1 ms)
     √ Our_App says "Hello Édouard!" to "édouard" in "english"
