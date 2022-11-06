@@ -1,6 +1,6 @@
 import { parse } from 'csv-parse/sync';
 
-export default class SpecExamplesParser {
+export class SpecExamplesParser {
 
     /**
      * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")

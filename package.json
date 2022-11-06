@@ -3,17 +3,20 @@
   "version": "0.3.0",
   "description": "Specification examples parser for Javascript tests",
   "repository": {
-    "url": "https://github.com/testndev/spec-examples-parser"
+    "type": "git",
+    "url": "git+https://github.com/testndev/spec-examples-parser.git"
   },
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/**/*"
+    "dist"
   ],
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "build": "npx tsc",
+    "prepare": "npm test && npm run build",
     "test": " npx playwright test"
   },
   "author": {

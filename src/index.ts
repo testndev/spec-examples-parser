@@ -1,3 +1,1 @@
-import SpecExamplesParser from './SpecExamplesParser';
-
-export {SpecExamplesParser}; 
+export * from './SpecExamplesParser'; 
