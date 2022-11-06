@@ -20,7 +20,7 @@ Here a sample using [Playwright Test](https://playwright.dev) framework.
 
 ```javascript
 import { test, expect } from '@playwright/test';
-import examples from '@testndev/spec-examples-parser';
+import { SpecExamplesParser as examples } from '@testndev/spec-examples-parser';
 import { greetings } from './greetings';
 
 examples.fromGherkinFormatTable(`

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import SpecExamplesParser from '../src/SpecExamplesParser';
+import { SpecExamplesParser as examples} from '../src/SpecExamplesParser';
 
 test.describe(() => {
 
@@ -55,7 +55,7 @@ test.describe(() => {
             });
 
             await test.step(`when SpecExamplesParser is asked to convert it to objects' array`, async () => {
-              jsonResult = SpecExamplesParser.fromGherkinFormatTable(textualInput);
+              jsonResult = examples.fromGherkinFormatTable(textualInput);
               testInfo.attach('3-obtained-result.json', { body: JSON.stringify(jsonResult, null, 2), contentType: 'application/json' });
             });
 

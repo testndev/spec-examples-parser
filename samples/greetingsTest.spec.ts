@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import examples from '../src/SpecExamplesParser';
+import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
 import { greetings } from './greetings';
 
 test.describe(`Sample: testing "greetings" function`, () => {
