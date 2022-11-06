@@ -12,36 +12,45 @@
 A simple parser that turns specification examples into treatable array, for your Javascript tests.
 
 
-## Example
+## Samples
 
-See samples in [samples/](samples/) directory
+See complete and detailed samples in ... (WIP! in new repo) 
   
-Here a sample using [Playwright Test](https://playwright.dev) framework.
+Here a sample using Jest framework.
 
-```javascript
-import { test, expect } from '@playwright/test';
+With file named `greetingsLocalFormats.spec.ts` containing:
+
+```typescript
+import { describe, expect, test } from '@jest/globals';
 import { SpecExamplesParser as examples } from '@testndev/spec-examples-parser';
-import { greetings } from './greetings';
+import { greetings } from '../greetings';
 
-examples.fromGherkinFormatTable(`
-  name      | language | greetingWord | expectedPhrase
-  Sébastien | french   | Bonjour      | "Bonjour Sébastien !"
-  édouard   | english  | Hello        | Hello Édouard!
-  ROSA      | spanish  | Hola         | ¡Hola Rosa!
+describe(`Our_App respects local greetings formats for supported languages`, () => {
+  examples.fromGherkinFormatTable(`
+      name      | language | greetingWord | expectedPhrase
+      Sébastien | french   | Bonjour      | "Bonjour Sébastien !"
+      édouard   | english  | Hello        | Hello Édouard!
+      ROSA      | spanish  | Hola         | ¡Hola Rosa!
   `)
     .forEach(({ name, language, greetingWord, expectedPhrase }) => {
-        test(`Greetings asked in ${language} respect local format`, () => {
-            const greetingsPhrase = greetings(name, language);
-            expect(greetingsPhrase).toContain(greetingWord);
-            expect(greetingsPhrase).toBe(expectedPhrase);
-        });
+      test(`Our_App says "${expectedPhrase}" to "${name}" in "${language}"`, () => {
+        const greetingsPhrase = greetings(name, language);
+        expect(greetingsPhrase).toContain(greetingWord);
+        expect(greetingsPhrase).toBe(expectedPhrase);
+      });
     });
-
+});
 ```
 
+executing test file will return in terminal: 
 
-
-
+```
+ PASS  ./greetingsLocalFormats.spec.ts
+  Our_App respects local greetings formats for supported languages
+    √ Our_App says "Bonjour Sébastien !" to "Sébastien" in "french" (1 ms)
+    √ Our_App says "Hello Édouard!" to "édouard" in "english"
+    √ Our_App says "¡Hola Rosa!" to "ROSA" in "spanish"
+```
 
 ## Development
 
