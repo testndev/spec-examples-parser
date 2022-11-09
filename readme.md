@@ -1,14 +1,24 @@
 # @testndev/spec-examples-parser
 
-![License](https://img.shields.io/github/license/testndev/spec-examples-parser)
-![NPM Downloads](https://img.shields.io/npm/dw/@testndev/spec-examples-parser)
+[![License](https://img.shields.io/github/license/testndev/spec-examples-parser)](https://github.com/testndev/spec-examples-parser/blob/main/license.txt)
+[![NPM Downloads](https://img.shields.io/npm/dw/@testndev/spec-examples-parser)](https://www.npmjs.com/package/@testndev/spec-examples-parser)
 
-![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)
-![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)
+[![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser)
+[![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser/issues)
 
 **Specification examples parser for TypeScript tests**
 
-A simple parser that turns specification examples (*Gherkin* style text, CSV...) into treatable array of objects, for your TypeScript tests.
+`spec-examples-parser` is a simple parser that turns specification examples into treatable array of objects, for your TypeScript tests.
+
+Specification examples can be given:
+1. directly inside the same test file, as: 
+    - ✅ [*Gherkin* style text (`Scenario Outline`)](https://cucumber.io/docs/gherkin/reference/#scenario-outline)
+2. reading from files:
+    - 🟥 CSV
+    - 🟥 JSON
+    - 🟥 markdown containing table
+
+## Works with
 
 Tested with those testing frameworks:
 - [Jest](https://jestjs.io/)
@@ -17,8 +27,8 @@ Tested with those testing frameworks:
 
 ## Samples
 
-> See complete and detailed samples in https://github.com/testndev/spec-examples-parser-samples
-  
+No more chit-chat. 
+
 Let's see a first sample using [Jest](https://jestjs.io/), with TypeScript test file containing:
 
 ```typescript
@@ -43,7 +53,7 @@ describe(`Our_App respects local greetings formats for supported languages`, () 
 });
 ```
 
-executing this test will return in terminal: 
+executing this file will create and execute 3 tests, and return in terminal: 
 
 ```
   Our_App respects local greetings formats for supported languages
@@ -51,6 +61,9 @@ executing this test will return in terminal:
     √ Our_App says "Hello Édouard!" to "édouard" in "english"
     √ Our_App says "¡Hola Rosa!" to "ROSA" in "spanish"
 ```
+
+> You can find more detailed samples in https://github.com/testndev/spec-examples-parser-samples. They are ready to be executed!
+
 
 ## Development
 
@@ -66,6 +79,7 @@ git clone git@github.com:testndev/spec-examples-parser.git
 cd @testndev/spec-examples-parser
 npm install
 ```
+
 Testing:
 
 ```bash
