@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpecExamplesParser = void 0;
+var fs = require("fs");
 var sync_1 = require("csv-parse/sync");
 var SpecExamplesParser = /** @class */ (function () {
     function SpecExamplesParser() {
@@ -16,8 +17,13 @@ var SpecExamplesParser = /** @class */ (function () {
         });
         return dataTable;
     };
-    SpecExamplesParser.fromCsv = function (filePath) {
-        throw new Error("Not implemented yet");
+    SpecExamplesParser.fromCsv = function (filePath, encoding) {
+        if (encoding === void 0) { encoding = 'utf-8'; }
+        var examplesText = fs.readFileSync(filePath, { encoding: encoding });
+        var dataTable = (0, sync_1.parse)(examplesText, {
+            columns: true, skip_empty_lines: true, delimiter: ',', relax_quotes: true, trim: true
+        });
+        return dataTable;
     };
     SpecExamplesParser.fromExcel = function (filePath) {
         throw new Error("Not implemented yet");

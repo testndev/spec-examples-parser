@@ -1,3 +1,4 @@
+/// <reference types="node" />
 export declare class SpecExamplesParser {
     /**
      * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
@@ -5,6 +6,6 @@ export declare class SpecExamplesParser {
      * @returns a list of object
      */
     static fromGherkinFormatTable(examplesText: string): any;
-    static fromCsv(filePath: string): void;
+    static fromCsv(filePath: string, encoding?: BufferEncoding): any;
     static fromExcel(filePath: string): void;
 }
