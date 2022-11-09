@@ -1,4 +1,5 @@
 import { parse } from 'csv-parse/sync';
+import fs from 'fs';
 
 export class SpecExamplesParser {
 
@@ -14,8 +15,12 @@ export class SpecExamplesParser {
         return dataTable;
     }
 
-    static fromCsv(filePath: string) {
-        throw new Error("Not implemented yet");
+    static fromCsv(filePath: string, encoding: string = 'utf-8') {
+        const examplesText = fs.readFileSync(filePath, { encoding });
+        const dataTable = parse(examplesText, {
+            columns: true, skip_empty_lines: true, delimiter: ',', relax_quotes: true, trim: true
+        });
+        return dataTable;
     }
 
     static fromExcel(filePath: string) {

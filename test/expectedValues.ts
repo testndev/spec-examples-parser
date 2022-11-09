@@ -1,3 +1,10 @@
+export const greetingsWithSpaces = [
+  { name: 'Sébastien', language: 'french', greetingWord: 'Bonjour', expectedPhrase: 'Bonjour Sébastien !' },
+  { name: 'édouard', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello Édouard!' },
+  { name: 'ROSA', language: 'spanish', greetingWord: 'Hola', expectedPhrase: '¡Hola Rosa!' },
+  { name: 'Paul', language: 'italian', greetingWord: 'Ciao', expectedPhrase: 'Ciao Paul!' },
+  { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' }
+];
 export const examplesListOfGherkinExamples = [
   {
     comment: 'empty text',
@@ -28,12 +35,6 @@ export const examplesListOfGherkinExamples = [
     Paul      | italian  | Ciao         | Ciao Paul!
     Samuel    | danish   | Hej          | Hej Samuel!
     `,
-    expectedList: [
-      { name: 'Sébastien', language: 'french', greetingWord: 'Bonjour', expectedPhrase: 'Bonjour Sébastien !' },
-      { name: 'édouard', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello Édouard!' },
-      { name: 'ROSA', language: 'spanish', greetingWord: 'Hola', expectedPhrase: '¡Hola Rosa!' },
-      { name: 'Paul', language: 'italian', greetingWord: 'Ciao', expectedPhrase: 'Ciao Paul!' },
-      { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' }
-    ]
+    expectedList: greetingsWithSpaces
   }
 ];

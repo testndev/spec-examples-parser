@@ -14,9 +14,9 @@ Specification examples can be given:
 1. directly inside the same test file, as: 
     - ✅ [*Gherkin* style text (`Scenario Outline`)](https://cucumber.io/docs/gherkin/reference/#scenario-outline)
 2. reading from files:
-    - 🟥 CSV
-    - 🟥 JSON
-    - 🟥 markdown containing table
+    - ✅ [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values)
+    - 🟥 JSON *(not yet)*
+    - 🟥 markdown containing table *(not yet)*
 
 ## Works with
 
