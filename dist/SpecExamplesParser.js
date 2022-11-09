@@ -25,6 +25,14 @@ var SpecExamplesParser = /** @class */ (function () {
         });
         return dataTable;
     };
+    SpecExamplesParser.fromTsv = function (filePath, encoding) {
+        if (encoding === void 0) { encoding = 'utf-8'; }
+        var examplesText = fs.readFileSync(filePath, { encoding: encoding });
+        var dataTable = (0, sync_1.parse)(examplesText, {
+            columns: true, skip_empty_lines: true, delimiter: '\t', relax_quotes: true, trim: true
+        });
+        return dataTable;
+    };
     SpecExamplesParser.fromExcel = function (filePath) {
         throw new Error("Not implemented yet");
     };

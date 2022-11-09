@@ -57,4 +57,29 @@ test.describe('Parsing files', () => {
       });
 
     });
+
+    test(`Parsing TSV`,
+    async ({ }, testInfo) => {
+      let jsonResult: any;
+      const expectedList = greetingsWithSpaces;
+      const datasetFilePath = './test/specexamples/greetings-with-quotes.tsv'
+      await test.step(`given a TSV file`, async () => {
+        testInfo.attach(datasetFilePath, { body: fs.readFileSync(datasetFilePath, { encoding: 'utf-8' }), contentType: 'text/plain' });
+      });
+
+      await test.step(`when SpecExamplesParser is asked to convert it to objects' array`, async () => {
+        jsonResult = examples.fromTsv(datasetFilePath);
+      });
+
+      await test.step(`then the result is an array`, async () => {
+        expect(Array.isArray(jsonResult)).toBe(true);
+      });
+
+      await test.step(`and result is equal to expected (see '2-expected-result.json' in attachment)`, async () => {
+        testInfo.attach('2-expected-result.json', { body: JSON.stringify(expectedList, null, 2), contentType: 'application/json' });
+        testInfo.attach('3-obtained-result.json', { body: JSON.stringify(jsonResult, null, 2), contentType: 'application/json' });
+        expect(jsonResult).toStrictEqual(expectedList);
+      });
+
+    });
 });

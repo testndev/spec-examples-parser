@@ -23,6 +23,14 @@ export class SpecExamplesParser {
         return dataTable;
     }
 
+    static fromTsv(filePath: string, encoding: BufferEncoding = 'utf-8') {
+        const examplesText = fs.readFileSync(filePath, { encoding });
+        const dataTable = parse(examplesText, {
+            columns: true, skip_empty_lines: true, delimiter: '\t', relax_quotes: true, trim: true
+        });
+        return dataTable;
+    }
+
     static fromExcel(filePath: string) {
         throw new Error("Not implemented yet");
     }

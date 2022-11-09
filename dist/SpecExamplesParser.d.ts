@@ -7,5 +7,6 @@ export declare class SpecExamplesParser {
      */
     static fromGherkinFormatTable(examplesText: string): any;
     static fromCsv(filePath: string, encoding?: BufferEncoding): any;
+    static fromTsv(filePath: string, encoding?: BufferEncoding): any;
     static fromExcel(filePath: string): void;
 }
