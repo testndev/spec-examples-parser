@@ -1,0 +1,6 @@
+name	language	greetingWord	expectedPhrase
+Sébastien	french	Bonjour	"Bonjour Sébastien !"
+édouard	english	Hello	"Hello Édouard!"
+ROSA	spanish	Hola	"¡Hola Rosa!"
+Paul	italian	Ciao	"Ciao Paul!"
+Samuel	danish	Hej	"Hej Samuel!"
