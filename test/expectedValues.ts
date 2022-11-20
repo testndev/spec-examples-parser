@@ -5,11 +5,24 @@ export const greetingsWithSpaces = [
   { name: 'Paul', language: 'italian', greetingWord: 'Ciao', expectedPhrase: 'Ciao Paul!' },
   { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' }
 ];
+
+export const simpleAbcValues = [
+  { letter: 'A', order: '1' },
+  { letter: 'B', order: '2' },
+  { letter: 'Z', order: '26' },
+];
+
+export const firstValueIsEmpty = [
+  { name: '', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello!' }
+];
+
+export const emptyList = [];
+
 export const examplesListOfGherkinExamples = [
   {
     comment: 'empty text',
     textualInput: '  ',
-    expectedList: []
+    expectedList: emptyList
   },
   {
     comment: 'text representing table of simple values, with 2 columns and 3 lines',
@@ -19,11 +32,7 @@ export const examplesListOfGherkinExamples = [
       B     | 2  
       Z     | 26    
     `,
-    expectedList: [
-      { letter: 'A', order: '1' },
-      { letter: 'B', order: '2' },
-      { letter: 'Z', order: '26' },
-    ]
+    expectedList: simpleAbcValues
   },
   {
     comment: 'text representing table with values having spaces and quotes',
