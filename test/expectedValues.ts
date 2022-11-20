@@ -6,6 +6,11 @@ export const greetingsWithSpaces = [
   { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' }
 ];
 
+export const eatingLeft = [
+  { start: '12', eat: '5' , left: '7'},
+  { start: '20', eat: '5' , left: '15'},
+];
+
 export const simpleAbcValues = [
   { letter: 'A', order: '1' },
   { letter: 'B', order: '2' },
