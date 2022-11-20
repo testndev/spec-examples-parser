@@ -6,7 +6,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser)
 [![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser/issues)
 
-**Specification examples parser for TypeScript tests**
+**Specification examples parser for tests written in TypeScript**
 
 `spec-examples-parser` is a simple parser that turns specification examples into treatable array of objects, for your TypeScript tests.
 
@@ -14,7 +14,8 @@ Specification examples can be given:
 1. directly inside the same test file, as: 
     - ✅ [*Gherkin* style text (`Scenario Outline`)](https://cucumber.io/docs/gherkin/reference/#scenario-outline)
 2. reading from files:
-    - ✅ [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values)
+    - ✅ delimiter-separated values file ([CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values))
+    - ✅ Feature file containing one ["`Scenario Outline`"](https://cucumber.io/docs/gherkin/reference/#scenario-outline) or more...
     - 🟥 JSON *(not yet)*
     - 🟥 markdown containing table *(not yet)*
 
