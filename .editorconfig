@@ -14,5 +14,8 @@ trim_trailing_whitespace = false
 [*.txt]
 trim_trailing_whitespace = false
 
+[*.latin1.*]
+charset = latin1
+
 [/package.json]
 insert_final_newline = true # npm install rewrites the JSON file with a final newline, so we manually keep them to prevent unneeded stashes
