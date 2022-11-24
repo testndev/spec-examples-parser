@@ -3,16 +3,16 @@ export const greetingsWithSpaces = [
   { name: 'édouard', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello Édouard!' },
   { name: 'ROSA', language: 'spanish', greetingWord: 'Hola', expectedPhrase: '¡Hola Rosa!' },
   { name: 'Paul', language: 'italian', greetingWord: 'Ciao', expectedPhrase: 'Ciao Paul!' },
-  { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' }
+  { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' },
 ];
 
 export const eatingCucumberLeft = [
-  { start: '12', eat: '5' , left: '7'},
-  { start: '20', eat: '5' , left: '15'},
+  { start: '12', eat: '5', left: '7' },
+  { start: '20', eat: '5', left: '15' },
 ];
 
 export const eatingApplesLeft = [
-  { start: '10', eat: '4' , left: '6'},
+  { start: '10', eat: '4', left: '6' },
 ];
 
 
@@ -23,7 +23,7 @@ export const simpleAbcValues = [
 ];
 
 export const firstValueIsEmpty = [
-  { name: '', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello!' }
+  { name: '', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello!' },
 ];
 
 export const emptyList = [];
@@ -31,8 +31,40 @@ export const emptyList = [];
 export const examplesListOfGherkinExamples = [
   {
     comment: 'empty text',
+    textualInput: '',
+    expectedList: emptyList,
+  },
+  {
+    comment: 'blank text',
     textualInput: '  ',
-    expectedList: emptyList
+    expectedList: emptyList,
+  },
+  {
+    comment: 'blank multiline text',
+    textualInput: `
+    
+    
+    `,
+    expectedList: emptyList,
+  },
+  {
+    comment: 'only 1 character',
+    textualInput: 'a',
+    expectedList: emptyList,
+  },
+  {
+    comment: 'text with only header',
+    textualInput: `letter  | order`,
+    expectedList: emptyList,
+  },
+
+  {
+    comment: 'text with header, with 2 columns and 1 line',
+    textualInput: `
+    letter  | order     
+    A       | 1   
+    `,
+    expectedList: [{ "letter": "A", "order": "1" }],
   },
   {
     comment: 'text representing table of simple values, with 2 columns and 3 lines',
@@ -42,7 +74,7 @@ export const examplesListOfGherkinExamples = [
       B     | 2  
       Z     | 26    
     `,
-    expectedList: simpleAbcValues
+    expectedList: simpleAbcValues,
   },
   {
     comment: 'text representing table with values having spaces and quotes',
@@ -54,6 +86,6 @@ export const examplesListOfGherkinExamples = [
     Paul      | italian  | Ciao         | Ciao Paul!
     Samuel    | danish   | Hej          | Hej Samuel!
     `,
-    expectedList: greetingsWithSpaces
-  }
+    expectedList: greetingsWithSpaces,
+  },
 ];
