@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { parse } from 'csv-parse/sync';
-import { FileParsingOptions, FeatureFileParsingOptions } from './FileParsingOptions';
+import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
 import { defaultGherkinParsingOptions, defaultCsvParsingOptions, defaultTsvParsingOptions } from './const/defaultParsingOptions';
 import GherkinFeatureFileParser from './parsers/GherkinFeatureFileParser';
 import { convertToCleanTsvFormat } from './utils/texts';

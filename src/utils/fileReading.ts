@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { FileParsingOptions, FeatureFileParsingOptions } from '../FileParsingOptions';
+import { FileParsingOptions, FeatureFileParsingOptions } from '../const/FileParsingOptions';
 
 function getEncoding(parsingOptions: FileParsingOptions | undefined): BufferEncoding {
   const defaultEncoding: BufferEncoding = 'utf8';

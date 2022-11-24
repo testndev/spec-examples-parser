@@ -1,4 +1,4 @@
-import { FileParsingOptions } from '../FileParsingOptions';
+import { FileParsingOptions } from './FileParsingOptions';
 
 const defaultParsingOptions: FileParsingOptions = {
   columns: true, skip_empty_lines: true, relax_quotes: true, trim: true, encoding: 'utf-8',

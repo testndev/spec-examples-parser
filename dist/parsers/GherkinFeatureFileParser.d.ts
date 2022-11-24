@@ -1,4 +1,4 @@
-import { FeatureFileParsingOptions } from '../FileParsingOptions';
+import { FeatureFileParsingOptions } from '../const/FileParsingOptions';
 export default class GherkinFeatureFileParser {
     /**
           * Parse a Gherkin-style Feature file (SpecFlow/Cucumber),

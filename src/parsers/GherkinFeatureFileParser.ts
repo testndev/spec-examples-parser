@@ -1,5 +1,5 @@
 import { convertToCleanTsvFormat, isTextBlankOrEmpty } from '../utils/texts';
-import { FeatureFileParsingOptions } from '../FileParsingOptions';
+import { FeatureFileParsingOptions } from '../const/FileParsingOptions';
 import { defaultGherkinParsingOptions } from '../const/defaultParsingOptions';
 import { throwNoEnoughScenarioOutlineInFileError, throwEmptyFileError, throwNotFeatureFileError } from '../utils/errors';
 import { parse } from 'csv-parse/sync';

@@ -17,7 +17,7 @@
   "scripts": {
     "clean": "npx rimraf dist",
     "build": "npm run clean && npx tsc",
-    "prepare": "npm test && npm run build",
+    "prepare": "npm run coverage && npm run build",
     "test": "npx playwright test",
     "coverage": "npx nyc  --reporter=lcov --reporter=text-summary playwright test "
   },

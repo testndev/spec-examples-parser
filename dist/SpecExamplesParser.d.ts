@@ -1,4 +1,4 @@
-import { FileParsingOptions, FeatureFileParsingOptions } from './FileParsingOptions';
+import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
 export declare class SpecExamplesParser {
     /**
        * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
