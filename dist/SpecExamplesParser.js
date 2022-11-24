@@ -1,124 +1,59 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpecExamplesParser = void 0;
 var fs = require("fs");
 var sync_1 = require("csv-parse/sync");
+var defaultParsingOptions_1 = require("./const/defaultParsingOptions");
+var GherkinFeatureFileParser_1 = require("./parsers/GherkinFeatureFileParser");
+var texts_1 = require("./utils/texts");
 var SpecExamplesParser = /** @class */ (function () {
     function SpecExamplesParser() {
     }
     /**
-     * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
-     * @param examplesText Examples in Gherkin format
-     * @returns a list of object
-     */
-    SpecExamplesParser.fromGherkinFormatTable = function (examplesText) {
-        var dataTable = (0, sync_1.parse)(examplesText, {
-            columns: true, skip_empty_lines: true, delimiter: '|', relax_quotes: true, trim: true
-        });
-        return dataTable;
+       * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
+       * @param examplesText Examples in Gherkin format
+       * @returns a list of object
+       */
+    SpecExamplesParser.fromGherkinFormatTable = function (examplesText, parsingOptions) {
+        var lines = examplesText.split('\n');
+        var text = (0, texts_1.convertToCleanTsvFormat)(lines);
+        return (0, sync_1.parse)(text, __assign(__assign({}, defaultParsingOptions_1.defaultGherkinParsingOptions), parsingOptions));
     };
-    SpecExamplesParser.fromCsv = function (filePath, encoding) {
-        if (encoding === void 0) { encoding = 'utf-8'; }
-        var examplesText = fs.readFileSync(filePath, { encoding: encoding });
-        var dataTable = (0, sync_1.parse)(examplesText, {
-            columns: true, skip_empty_lines: true, delimiter: ',', relax_quotes: true, trim: true
-        });
-        return dataTable;
+    SpecExamplesParser.fromCsv = function (filePath, parsingOptions) {
+        var examplesText = fs.readFileSync(filePath);
+        return (0, sync_1.parse)(examplesText, __assign(__assign({}, defaultParsingOptions_1.defaultCsvParsingOptions), parsingOptions));
     };
-    SpecExamplesParser.fromTsv = function (filePath, encoding) {
-        if (encoding === void 0) { encoding = 'utf-8'; }
-        var examplesText = fs.readFileSync(filePath, { encoding: encoding });
-        var dataTable = (0, sync_1.parse)(examplesText, {
-            columns: true, skip_empty_lines: true, delimiter: '\t', relax_quotes: true, trim: true
-        });
-        return dataTable;
+    SpecExamplesParser.fromTsv = function (filePath, parsingOptions) {
+        var examplesText = fs.readFileSync(filePath);
+        return (0, sync_1.parse)(examplesText, __assign(__assign({}, defaultParsingOptions_1.defaultTsvParsingOptions), parsingOptions));
     };
-    SpecExamplesParser.fromGherkinFeatureFile = function (filePath, options) {
-        var encoding = (options === null || options === void 0 ? void 0 : options.encoding) || 'utf-8';
-        var neededTableOrder = (options === null || options === void 0 ? void 0 : options.position) || 1;
-        var fullText = fs.readFileSync(filePath, { encoding: encoding });
-        var dataTable = [];
-        if (this.isFileEmpty(fullText)) {
-            throw new Error("\"".concat(filePath, "\" file is empty"));
-        }
-        else {
-            if (!this.isFeatureFile(fullText)) {
-                throw new Error("\"".concat(filePath, "\" file is not a \"feature\" file"));
-            }
-            else {
-                var numberOfExamplesKeywords = this.numberOfExamplesKeywords(fullText);
-                if (numberOfExamplesKeywords > 0) {
-                    if (numberOfExamplesKeywords >= neededTableOrder) {
-                        var indexesOf = SpecExamplesParser.positionsOfExamplesKeywords(fullText);
-                        var startSearchingAtLine = indexesOf[neededTableOrder - 1];
-                        var examplesTableText = firstExamplesTableText(fullText, startSearchingAtLine);
-                        dataTable = (0, sync_1.parse)(examplesTableText, {
-                            columns: true,
-                            skip_empty_lines: true,
-                            delimiter: '|',
-                            relax_quotes: true,
-                            trim: true
-                        });
-                    }
-                    else {
-                        throw new Error("\"".concat(filePath, "\" Feature file contains only ").concat(numberOfExamplesKeywords, " \"Scenario Outline\", asked for ").concat(neededTableOrder, "st"));
-                    }
-                }
-                else {
-                    throw new Error("\"".concat(filePath, "\" Feature file doesn't contain any \"Scenario Outline\""));
-                }
-            }
-        }
-        return dataTable;
-    };
-    SpecExamplesParser.positionsOfExamplesKeywords = function (fullText) {
-        return fullText.split('\n').map(function (x, i) { return isExamplesKeyword(x) ? i : -1; }).filter(function (i) { return i >= 0; });
-    };
-    SpecExamplesParser.numberOfExamplesKeywords = function (fullText) {
-        return fullText.split('\n').filter(isExamplesKeyword).length;
+    /**
+       * Parse a Gherkin-style Feature file (SpecFlow/Cucumber),
+       * take a "examples table" from it and convert to usable format
+       * @param filePath feature file path
+       * @param parsingOptions some optional configuration for parsing
+       * @param parsingOptions.examplesTableIndex which Nth table will be taken. by default = 1
+       * @returns an array of objects
+       */
+    SpecExamplesParser.fromGherkinFeatureFile = function (filePath, parsingOptions) {
+        return GherkinFeatureFileParser_1.default.parse(filePath, parsingOptions);
     };
     SpecExamplesParser.fromExcel = function (filePath) {
-        throw new Error("Not implemented yet");
-    };
-    SpecExamplesParser.isFileEmpty = function (text) {
-        return text === undefined || text.trim() === '';
-    };
-    SpecExamplesParser.isFeatureFile = function (text) {
-        return text.toLowerCase().includes('feature:');
+        console.log(" try to parse ".concat(filePath, " Excel File"));
+        throw new Error('Not implemented yet');
     };
     return SpecExamplesParser;
 }());
 exports.SpecExamplesParser = SpecExamplesParser;
-function firstExamplesTableText(fullText, examplesKeywordLineIndex) {
-    var lines = fullText.split('\n');
-    var followingLines = lines.slice(examplesKeywordLineIndex + 1);
-    var examplesTableLines = [];
-    followingLines.every(function (line) {
-        var isAnExempleLine = line.trim().startsWith('|');
-        if (isAnExempleLine) {
-            examplesTableLines.push(line);
-        }
-        return isAnExempleLine;
-    });
-    return cleanExamplesTable(examplesTableLines).join('\n');
-}
-function isExamplesKeyword(line) {
-    return line.includes('Examples:');
-}
-function cleanExamplesTable(examplesTableLines) {
-    if (examplesTableLines && examplesTableLines.length === 0)
-        return [];
-    var header = examplesTableLines[0];
-    if (header.trim().startsWith('|')) {
-        return examplesTableLines
-            .map(function (line) {
-            var trim = line.trim();
-            //remove '|' at begin and end
-            return trim.substring(1, trim.length - 1);
-        });
-    }
-    else {
-        return examplesTableLines.map(function (line) { return line.trim(); });
-    }
-}
 //# sourceMappingURL=SpecExamplesParser.js.map
