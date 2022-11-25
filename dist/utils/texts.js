@@ -2,20 +2,26 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertToCleanTsvFormat = exports.isTextBlankOrEmpty = void 0;
 function convertToCleanTsvFormat(examplesTableLines) {
-    var header = examplesTableLines[0];
-    if (header.trim().startsWith('|')) {
-        return examplesTableLines
-            .map(function (line) {
-            var trim = line.trim();
-            //remove '|' at begin and end
-            return trim.substring(1, trim.length - 1);
-        })
-            .join('\n');
+    var tableLines = examplesTableLines.filter(function (line) { return !isTextBlankOrEmpty(line); });
+    if (tableLines && tableLines.length > 1) {
+        var header = tableLines[0];
+        if (header.trim().startsWith('|')) {
+            return tableLines
+                .map(function (line) {
+                var trim = line.trim();
+                //remove '|' at begin and end
+                return trim.substring(1, trim.length - 1);
+            })
+                .join('\n');
+        }
+        else {
+            return tableLines
+                .map(function (line) { return line.trim(); })
+                .join('\n');
+        }
     }
     else {
-        return examplesTableLines
-            .map(function (line) { return line.trim(); })
-            .join('\n');
+        return '';
     }
 }
 exports.convertToCleanTsvFormat = convertToCleanTsvFormat;
