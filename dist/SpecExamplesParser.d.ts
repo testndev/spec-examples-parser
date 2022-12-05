@@ -1,11 +1,6 @@
 import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
 export declare class SpecExamplesParser {
-    /**
-       * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
-       * @param examplesText Examples in Gherkin format
-       * @returns a list of object
-       */
-    static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions): any;
+    static fromJson(filePath: string): any;
     static fromCsv(filePath: string, parsingOptions?: FileParsingOptions): any;
     static fromTsv(filePath: string, parsingOptions?: FileParsingOptions): any;
     /**
@@ -17,5 +12,10 @@ export declare class SpecExamplesParser {
        * @returns an array of objects
        */
     static fromGherkinFeatureFile(filePath: string, parsingOptions?: FeatureFileParsingOptions): any;
-    static fromExcel(filePath: string): void;
+    /**
+       * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
+       * @param examplesText Examples in Gherkin format
+       * @returns a list of object
+       */
+    static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions): any;
 }

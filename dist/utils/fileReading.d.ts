@@ -1,5 +1,4 @@
-/// <reference types="node" />
-import { FileParsingOptions, FeatureFileParsingOptions } from '../const/FileParsingOptions';
-declare function getEncoding(parsingOptions: FileParsingOptions | undefined): BufferEncoding;
+import { FeatureFileParsingOptions } from '../const/FileParsingOptions';
 declare function getFullText(filePath: string, parsingOptions?: FeatureFileParsingOptions | undefined): string;
-export { getFullText, getEncoding, };
+declare function controlFileIsNotEmpty(filePath: string): void;
+export { getFullText, controlFileIsNotEmpty };
