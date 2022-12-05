@@ -1,3 +1,16 @@
+
+function throwEmptyTableInText() {
+  throw new Error("contains an empty table");
+}
+
+function throwEmptyText() {
+  throw new Error('given textual example is empty');
+}
+
+function throwEmptyTableInFileError(filePath: string) {
+  throw new Error(`"${filePath}" file contains an empty table`);
+}
+
 function throwEmptyFileError(filePath: string) {
   throw new Error(`"${filePath}" file is empty`);
 }
@@ -27,6 +40,9 @@ function throwFailedToParseJsonFileError(filePath: string, originalError: Error)
 
 
 export {
+  throwEmptyText,
+  throwEmptyTableInText,
+  throwEmptyTableInFileError,
   throwEmptyFileError,
   throwNotFeatureFileError,
   throwNoEnoughScenarioOutlineInFileError,
