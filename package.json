@@ -19,7 +19,8 @@
     "build": "npm run clean && npx tsc",
     "prepare": "npm run coverage && npm run build",
     "test": "npx playwright test",
-    "coverage": "npx nyc  --reporter=lcov --reporter=text-summary playwright test "
+    "lint": "npx eslint ./src/*.ts ./test/**/*.ts",
+    "coverage": "npx nyc  --reporter=lcov --reporter=text-summary playwright test"
   },
   "author": {
     "email": "alhusaine@testndev.com",
