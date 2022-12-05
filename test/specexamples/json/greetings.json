@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Sébastien",
+        "language": "french",
+        "greetingWord": "Bonjour",
+        "expectedPhrase": "Bonjour Sébastien !"
+    },
+    {
+        "name": "édouard",
+        "language": "english",
+        "greetingWord": "Hello",
+        "expectedPhrase": "Hello Édouard!"
+    },
+    {
+        "name": "ROSA",
+        "language": "spanish",
+        "greetingWord": "Hola",
+        "expectedPhrase": "¡Hola Rosa!"
+    },
+    {
+        "name": "Paul",
+        "language": "italian",
+        "greetingWord": "Ciao",
+        "expectedPhrase": "Ciao Paul!"
+    },
+    {
+        "name": "Samuel",
+        "language": "danish",
+        "greetingWord": "Hej",
+        "expectedPhrase": "Hej Samuel!"
+    }
+]
