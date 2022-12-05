@@ -16,7 +16,7 @@ Specification examples can be given:
 2. reading from files:
     - ✅ delimiter-separated values file ([CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values))
     - ✅ Feature file containing one ["`Scenario Outline`"](https://cucumber.io/docs/gherkin/reference/#scenario-outline) or more...
-    - 🟥 JSON *(not yet)*
+    - ✅ [JSON](https://en.wikipedia.org/wiki/JSON) file
     - 🟥 markdown containing table *(not yet)*
 
 ## Works with

@@ -7,7 +7,7 @@ import { examplesListOfGherkinExamples } from "./examplesListOfGherkinExamples";
 
 test.describe('Parsing textual Gherkin Example', () => {
 
-  Object.keys(examplesListOfGherkinExamples).forEach(testCase => {
+  ['nominal_case', 'alt_case'].forEach(testCase => {
 
     test.describe('#' + testCase, () => {
       examplesListOfGherkinExamples[testCase].forEach(
@@ -30,7 +30,24 @@ test.describe('Parsing textual Gherkin Example', () => {
     });
   });
 
-
+  test.describe('#error_case', () => {
+    examplesListOfGherkinExamples['error_case'].forEach(
+      ({ textualInput, partialErrorMessage, comment }) => {
+        test(`Parsing ${comment}`,
+          async ({ }, testInfo) => {
+            let call;
+            await test.step('given an "Examples" textual input with Gherkin-Style (see in attachment)', async () => {
+              ReportAttachments.addInputText(testInfo, textualInput);
+            });
+            await test.step('when SpecExamplesParser is asked to convert it to objects\' array', async () => {
+              call = () => { examples.fromGherkinFormatTable(textualInput); };
+            });
+            await test.step('then SpecExamplesParser throws an error', async () => {
+              expect(call).toThrow(partialErrorMessage);
+            });
+          });
+      });
+  });
 
 });
 

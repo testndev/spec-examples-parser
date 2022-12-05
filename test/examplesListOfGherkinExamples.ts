@@ -41,13 +41,13 @@ const errorCases = [
     testCase: '#error_case',
     comment: 'empty text',
     textualInput: '',
-    expectedList: emptyList,
+    partialErrorMessage: /.*given textual example is empty.*/
   },
   {
     testCase: '#error_case',
     comment: 'blank text',
     textualInput: '  ',
-    expectedList: emptyList,
+    partialErrorMessage: /.*given textual example is empty.*/
   },
   {
     testCase: '#error_case',
@@ -56,19 +56,19 @@ const errorCases = [
     
     
     `,
-    expectedList: emptyList,
+    partialErrorMessage: /.*given textual example is empty.*/
   },
   {
     testCase: '#error_case',
     comment: 'only 1 character',
     textualInput: 'a',
-    expectedList: emptyList,
+    partialErrorMessage: /.*contains an empty table.*/
   },
   {
     testCase: '#error_case',
     comment: 'text with only header',
     textualInput: `letter  | order`,
-    expectedList: emptyList,
+    partialErrorMessage: /.*contains an empty table.*/
   },
 ]
 

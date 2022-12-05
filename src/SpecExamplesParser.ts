@@ -1,32 +1,22 @@
-import * as fs from 'fs';
-import { parse } from 'csv-parse/sync';
 import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
-import { defaultGherkinParsingOptions, defaultCsvParsingOptions, defaultTsvParsingOptions } from './const/defaultParsingOptions';
 import GherkinFeatureFileParser from './parsers/GherkinFeatureFileParser';
-import { convertToCleanTsvFormat } from './utils/texts';
+import JsonFileParser from './parsers/JsonFileParser';
+import DsvFileParser from './parsers/DsvFileParser';
+import GherkinFeatureTextParser from './parsers/GherkinFeatureTextParser';
 
 
 export class SpecExamplesParser {
 
-  /**
-     * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
-     * @param examplesText Examples in Gherkin format
-     * @returns a list of object
-     */
-  static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions) {
-    const lines = examplesText.split('\n');
-    const text = convertToCleanTsvFormat(lines);
-    return parse(text, { ...defaultGherkinParsingOptions, ...parsingOptions });
+  static fromJson(filePath: string) {
+    return JsonFileParser.parse(filePath);
   }
 
   static fromCsv(filePath: string, parsingOptions?: FileParsingOptions) {
-    const examplesText = fs.readFileSync(filePath);
-    return parse(examplesText, { ...defaultCsvParsingOptions, ...parsingOptions });
+    return DsvFileParser.parseCsv(filePath, parsingOptions);
   }
 
   static fromTsv(filePath: string, parsingOptions?: FileParsingOptions) {
-    const examplesText = fs.readFileSync(filePath);
-    return parse(examplesText, { ...defaultTsvParsingOptions, ...parsingOptions });
+    return DsvFileParser.parseTsv(filePath, parsingOptions);
   }
 
   /**
@@ -41,10 +31,13 @@ export class SpecExamplesParser {
     return GherkinFeatureFileParser.parse(filePath, parsingOptions);
   }
 
-  static fromExcel(filePath: string) {
-    console.log(` try to parse ${filePath} Excel File`)
-    throw new Error('Not implemented yet');
+  /**
+     * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
+     * @param examplesText Examples in Gherkin format
+     * @returns a list of object
+     */
+  static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions) {
+    return GherkinFeatureTextParser.parse(examplesText, parsingOptions);
   }
 
 }
-

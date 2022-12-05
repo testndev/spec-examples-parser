@@ -1,11 +1,11 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { greetingsWithSpaces, simpleAbcValues, firstValueIsEmpty } from './expectedValues';
-import { thenResultEqualsExpectedArray, thenResultIsAnEmptyArray } from './helper/steps';
+import { thenResultEqualsExpectedArray } from './helper/steps';
 
 
-test.describe.serial('Parsing CSV files', () => {
+test.describe('Parsing TSV files', () => {
 
   test.describe('#nominal_case', () => {
 
@@ -54,28 +54,25 @@ test.describe.serial('Parsing CSV files', () => {
   });
 
   test.describe('#error_case', () => {
-
     [
       {
-        testTitle: 'empty result case - 1 header line only',
+        testTitle: '1 header line only',
         inputFilePath: './test/specexamples/tsv/header-only.tsv',
+        partialErrorMessage: /.*contains an empty table.*/
       },
       {
-        testTitle: 'empty result case - empty file',
+        testTitle: 'empty file',
         inputFilePath: './test/specexamples/emptyfile.txt',
+        partialErrorMessage: /.*file is empty.*/
       }
     ]
-      .forEach(({ testTitle, inputFilePath }) => {
+      .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const result = examples.fromCsv(inputFilePath);
-          await thenResultIsAnEmptyArray(result);
+          const call = () => { examples.fromTsv(inputFilePath); };
+          expect(call).toThrow(partialErrorMessage);
         });
       });
   });
 
 });
-
-
-
-

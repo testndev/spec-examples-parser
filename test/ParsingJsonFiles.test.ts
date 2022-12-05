@@ -1,22 +1,27 @@
-import { test, expect } from '@playwright/test';
+import { test , expect} from '@playwright/test';
 import { thenResultEqualsExpectedArray } from './helper/steps';
 import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
-import { greetingsWithSpaces, simpleAbcValues, firstValueIsEmpty } from './expectedValues';
+import { greetingsWithSpaces, simpleAbcValues, emptyList,abzWithOrdersAsNumber } from './expectedValues';
 
-test.describe('Parsing CSV files', () => {
+test.describe('Parsing JSON files', () => {
 
   test.describe('#nominal_case', () => {
 
     [
       {
-        testTitle: 'simple values',
-        inputFilePath: './test/specexamples/csv/simple-ABC-values.csv',
+        testTitle: 'simple, all strings',
+        inputFilePath: './test/specexamples/json/simpleAbc.json',
         expectedList: simpleAbcValues,
       },
       {
-        testTitle: 'with quotes',
-        inputFilePath: './test/specexamples/csv/greetings-with-quotes.csv',
+        testTitle: 'with numbers as numerical',
+        inputFilePath: './test/specexamples/json/abzWithOrdersAsNumber.json',
+        expectedList: abzWithOrdersAsNumber,
+      },
+      {
+        testTitle: 'text with space',
+        inputFilePath: './test/specexamples/json/greetings.json',
         expectedList: greetingsWithSpaces,
       },
     ]
@@ -24,7 +29,7 @@ test.describe('Parsing CSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromCsv(inputFilePath);
+            return examples.fromJson(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -32,59 +37,60 @@ test.describe('Parsing CSV files', () => {
 
   });
 
-  test.describe('#alt_case', () => {
 
-    test('file with exotic encoding (latin1 / ISO 8859-1)', async ({ }, testInfo) => {
-      const expectedList = greetingsWithSpaces;
-      const inputFilePath = './test/specexamples/csv/greetings-with-quotes.latin1.csv';
-      const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
-        ReportAttachments.addInputFile(testInfo, inputFilePath);
-        return examples.fromCsv(inputFilePath, { encoding: 'latin1' });
-      });
-      await thenResultEqualsExpectedArray(testInfo, expectedList, result);
-    });
+  test.describe('#alt_case', () => {
 
     [
       {
-        testTitle: 'with quotes and empty cell',
-        inputFilePath: './test/specexamples/csv/greetings-with-quotes-empty.csv',
-        expectedList: firstValueIsEmpty,
+        testTitle: 'empty list in JSON',
+        inputFilePath: './test/specexamples/json/emptyList.json',
+        expectedList: emptyList,
       },
     ]
       .forEach(({ testTitle, inputFilePath, expectedList }) => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromCsv(inputFilePath);
+            return examples.fromJson(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
       });
 
   });
-
+ 
   test.describe('#error_case', () => {
     [
       {
-        testTitle: '1 header line only',
-        inputFilePath: './test/specexamples/csv/header-only.csv',
-        partialErrorMessage: /.*contains an empty table.*/
-
-      },
-      {
         testTitle: 'empty file',
         inputFilePath: './test/specexamples/emptyfile.txt',
-        partialErrorMessage: /.*file is empty.*/
-      }
+        partialErrorMessage: /.*file is empty.*/,
+      },
+      {
+        testTitle: 'not a JSON parsable',
+        inputFilePath: './test/specexamples/csv/simple-ABC-values.csv',
+        partialErrorMessage: /.*not a JSON-parseable file.*/,
+      },
+      {
+        testTitle: 'with a JSON parsing error',
+        inputFilePath: './test/specexamples/json/withJsonError.json',
+        partialErrorMessage: /.*Parsing ".*" JSON file failed.*/,
+      },
+      {
+        testTitle: 'not a list in JSON file',
+        inputFilePath: './test/specexamples/json/emptyObject.json',
+        partialErrorMessage: /.*JSON file contains an object, not a list of objects.*/,
+      },
     ]
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromCsv(inputFilePath); };
+          const call = () => { examples.fromJson(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });
 
+     
   });
 
 });
