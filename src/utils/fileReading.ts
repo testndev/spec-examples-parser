@@ -1,5 +1,7 @@
 import * as fs from 'fs';
 import { FileParsingOptions, FeatureFileParsingOptions } from '../const/FileParsingOptions';
+import { throwEmptyFileError } from './errors';
+import { isTextBlankOrEmpty } from './texts';
 
 const defaultEncoding: BufferEncoding = 'utf8';
 
@@ -11,4 +13,11 @@ function getFullText(filePath: string, parsingOptions?: FeatureFileParsingOption
   return fs.readFileSync(filePath, getEncoding(parsingOptions));
 }
 
-export { getFullText };
+function controlFileIsNotEmpty(filePath: string) {
+  const fullText = getFullText(filePath)
+  if (isTextBlankOrEmpty(fullText)) {
+    throwEmptyFileError(filePath)
+  }
+}
+
+export { getFullText, controlFileIsNotEmpty };
