@@ -1,6 +1,6 @@
 {
   "name": "@testndev/spec-examples-parser",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Specification examples parser for Javascript tests",
   "repository": {
     "type": "git",
