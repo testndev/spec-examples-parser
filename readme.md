@@ -13,12 +13,13 @@
 
 Specification examples can be given:
 1. directly inside the same test file, as: 
-    - ✅ [*Gherkin* style text (`Scenario Outline`)](https://cucumber.io/docs/gherkin/reference/#scenario-outline)
+    - ☑️ [*Gherkin* style text (`Scenario Outline`)](https://cucumber.io/docs/gherkin/reference/#scenario-outline)
 2. reading from files:
-    - ✅ delimiter-separated values file ([CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values))
-    - ✅ Feature file containing one ["`Scenario Outline`"](https://cucumber.io/docs/gherkin/reference/#scenario-outline) or more...
-    - ✅ [JSON](https://en.wikipedia.org/wiki/JSON) file
-    - 🟥 markdown containing table *(not yet)*
+    - ☑️ delimiter-separated values file ([CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or [TSV](https://en.wikipedia.org/wiki/Tab-separated_values))
+    - ☑️ Feature file (Cucumber/SpecFlow...) containing one ["`Scenario Outline`"](https://cucumber.io/docs/gherkin/reference/#scenario-outline) or more...
+    - ☑️ [JSON](https://en.wikipedia.org/wiki/JSON) file
+    - ⬛ Markdown containing [table](https://github.github.com/gfm/#table) *(not yet)*
+      > will be based on [GitHub Flavored Markdown](https://github.github.com/gfm/#tables-extension-) specs
 
 ## Works with
 
