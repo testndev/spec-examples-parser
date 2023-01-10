@@ -5,6 +5,5 @@ declare function throwEmptyFileError(filePath: string): void;
 declare function throwNoEnoughScenarioOutlineInFileError(filePath: string, numberOfExamplesKeywords: number, neededTableIndex: number): void;
 declare function throwNotFeatureFileError(filePath: string): void;
 declare function throwJsonNotRepresentingListError(filePath: string): void;
-declare function throwNotJsonParseableFileError(filePath: string): void;
 declare function throwFailedToParseJsonFileError(filePath: string, originalError: Error): void;
-export { throwEmptyText, throwEmptyTableInText, throwEmptyTableInFileError, throwEmptyFileError, throwNotFeatureFileError, throwNoEnoughScenarioOutlineInFileError, throwNotJsonParseableFileError, throwFailedToParseJsonFileError, throwJsonNotRepresentingListError };
+export { throwEmptyText, throwEmptyTableInText, throwEmptyTableInFileError, throwEmptyFileError, throwNotFeatureFileError, throwNoEnoughScenarioOutlineInFileError, throwFailedToParseJsonFileError, throwJsonNotRepresentingListError };

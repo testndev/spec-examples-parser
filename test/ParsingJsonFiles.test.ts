@@ -69,12 +69,12 @@ test.describe('Parsing JSON files', () => {
       {
         testTitle: 'not a JSON parsable',
         inputFilePath: './test/specexamples/csv/simple-ABC-values.csv',
-        partialErrorMessage: /.*not a JSON-parseable file.*/,
+        partialErrorMessage: /.*Parsing ".*" file to object failed.*/,
       },
       {
         testTitle: 'with a JSON parsing error',
         inputFilePath: './test/specexamples/json/withJsonError.json',
-        partialErrorMessage: /.*Parsing ".*" JSON file failed.*/,
+        partialErrorMessage: /.*Parsing ".*" file to object failed.*/,
       },
       {
         testTitle: 'not a list in JSON file',

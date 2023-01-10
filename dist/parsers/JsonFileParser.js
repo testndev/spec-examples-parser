@@ -13,12 +13,7 @@ var JsonFileParser = /** @class */ (function () {
             parsedContent = JSON.parse(fullText);
         }
         catch (error) {
-            if (error.message.includes('at position 0')) {
-                (0, errors_1.throwNotJsonParseableFileError)(filePath);
-            }
-            else {
-                (0, errors_1.throwFailedToParseJsonFileError)(filePath, error);
-            }
+            (0, errors_1.throwFailedToParseJsonFileError)(filePath, error);
         }
         if (!Array.isArray(parsedContent)) {
             (0, errors_1.throwJsonNotRepresentingListError)(filePath);

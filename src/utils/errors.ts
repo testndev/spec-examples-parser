@@ -30,12 +30,8 @@ function throwJsonNotRepresentingListError(filePath: string) {
   throw new Error(`"${filePath}" JSON file contains an object, not a list of objects`);
 }
 
-function throwNotJsonParseableFileError(filePath: string) {
-  throw new Error(`"${filePath}" file is not a JSON-parseable file (error at first character)`);
-}
-
 function throwFailedToParseJsonFileError(filePath: string, originalError: Error) {
-  throw new Error(`Parsing "${filePath}" JSON file failed. ${originalError.message}`);
+  throw new Error(`Parsing "${filePath}" file to object failed. ${originalError.message}`);
 }
 
 
@@ -46,7 +42,6 @@ export {
   throwEmptyFileError,
   throwNotFeatureFileError,
   throwNoEnoughScenarioOutlineInFileError,
-  throwNotJsonParseableFileError,
   throwFailedToParseJsonFileError,
   throwJsonNotRepresentingListError
 }

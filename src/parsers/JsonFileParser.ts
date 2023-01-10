@@ -1,6 +1,6 @@
 
 import { getFullText, controlFileIsNotEmpty } from '../utils/fileReading';
-import { throwFailedToParseJsonFileError, throwJsonNotRepresentingListError, throwNotJsonParseableFileError } from '../utils/errors';
+import { throwFailedToParseJsonFileError, throwJsonNotRepresentingListError } from '../utils/errors';
 
 export default class JsonFileParser {
 
@@ -10,13 +10,8 @@ export default class JsonFileParser {
     let parsedContent;
     try {
       parsedContent = JSON.parse(fullText);
-    } catch (error) {
-      if (error.message.includes('at position 0')) {
-        throwNotJsonParseableFileError(filePath);
-      }
-      else {
-        throwFailedToParseJsonFileError(filePath, error)
-      }
+    } catch (error) {      
+      throwFailedToParseJsonFileError(filePath, error)
     }
     if (!Array.isArray(parsedContent)) {
       throwJsonNotRepresentingListError(filePath);

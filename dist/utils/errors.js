@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.throwJsonNotRepresentingListError = exports.throwFailedToParseJsonFileError = exports.throwNotJsonParseableFileError = exports.throwNoEnoughScenarioOutlineInFileError = exports.throwNotFeatureFileError = exports.throwEmptyFileError = exports.throwEmptyTableInFileError = exports.throwEmptyTableInText = exports.throwEmptyText = void 0;
+exports.throwJsonNotRepresentingListError = exports.throwFailedToParseJsonFileError = exports.throwNoEnoughScenarioOutlineInFileError = exports.throwNotFeatureFileError = exports.throwEmptyFileError = exports.throwEmptyTableInFileError = exports.throwEmptyTableInText = exports.throwEmptyText = void 0;
 function throwEmptyTableInText() {
     throw new Error("contains an empty table");
 }
@@ -32,12 +32,8 @@ function throwJsonNotRepresentingListError(filePath) {
     throw new Error("\"".concat(filePath, "\" JSON file contains an object, not a list of objects"));
 }
 exports.throwJsonNotRepresentingListError = throwJsonNotRepresentingListError;
-function throwNotJsonParseableFileError(filePath) {
-    throw new Error("\"".concat(filePath, "\" file is not a JSON-parseable file (error at first character)"));
-}
-exports.throwNotJsonParseableFileError = throwNotJsonParseableFileError;
 function throwFailedToParseJsonFileError(filePath, originalError) {
-    throw new Error("Parsing \"".concat(filePath, "\" JSON file failed. ").concat(originalError.message));
+    throw new Error("Parsing \"".concat(filePath, "\" file to object failed. ").concat(originalError.message));
 }
 exports.throwFailedToParseJsonFileError = throwFailedToParseJsonFileError;
 //# sourceMappingURL=errors.js.map
