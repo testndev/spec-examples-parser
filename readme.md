@@ -6,6 +6,9 @@
 [![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser)
 [![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser/issues)
 
+![Build status](https://img.shields.io/github/actions/workflow/status/testndev/spec-examples-parser/ci.yaml)
+
+
 **Specification examples parser for tests written in TypeScript**
 
 `spec-examples-parser` is a simple parser that turns specification examples into treatable array of objects, for your TypeScript tests.
