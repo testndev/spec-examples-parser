@@ -34,7 +34,8 @@ export class SpecExamplesParser {
   /**
      * Convert a text listing Examples, as in Gherkin format (Examples block in "Scenario Outline")
      * @param examplesText Examples in Gherkin format
-     * @returns a list of object
+     * @param parsingOptions some optional configuration for parsing
+     * @returns an array of objects
      */
   static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions) {
     return GherkinFeatureTextParser.parse(examplesText, parsingOptions);
