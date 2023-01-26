@@ -24,7 +24,7 @@ test.describe('Parsing CSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromCsv(inputFilePath);
+            return examples.fromCsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -39,7 +39,7 @@ test.describe('Parsing CSV files', () => {
       const inputFilePath = './test/specexamples/csv/greetings-with-quotes.latin1.csv';
       const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
         ReportAttachments.addInputFile(testInfo, inputFilePath);
-        return examples.fromCsv(inputFilePath, { encoding: 'latin1' });
+        return examples.fromCsvFile(inputFilePath, { encoding: 'latin1' });
       });
       await thenResultEqualsExpectedArray(testInfo, expectedList, result);
     });
@@ -55,7 +55,7 @@ test.describe('Parsing CSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromCsv(inputFilePath);
+            return examples.fromCsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -80,7 +80,7 @@ test.describe('Parsing CSV files', () => {
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromCsv(inputFilePath); };
+          const call = () => { examples.fromCsvFile(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });

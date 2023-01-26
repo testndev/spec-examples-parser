@@ -7,15 +7,15 @@ import GherkinFeatureTextParser from './parsers/GherkinFeatureTextParser';
 
 export class SpecExamplesParser {
 
-  static fromJson(filePath: string) {
+  static fromJsonFile(filePath: string) {
     return JsonFileParser.parse(filePath);
   }
 
-  static fromCsv(filePath: string, parsingOptions?: FileParsingOptions) {
+  static fromCsvFile(filePath: string, parsingOptions?: FileParsingOptions) {
     return DsvFileParser.parseCsv(filePath, parsingOptions);
   }
 
-  static fromTsv(filePath: string, parsingOptions?: FileParsingOptions) {
+  static fromTsvFile(filePath: string, parsingOptions?: FileParsingOptions) {
     return DsvFileParser.parseTsv(filePath, parsingOptions);
   }
 

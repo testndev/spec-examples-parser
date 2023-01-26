@@ -25,7 +25,7 @@ test.describe('Parsing TSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromTsv(inputFilePath);
+            return examples.fromTsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -45,7 +45,7 @@ test.describe('Parsing TSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromTsv(inputFilePath);
+            return examples.fromTsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -69,7 +69,7 @@ test.describe('Parsing TSV files', () => {
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromTsv(inputFilePath); };
+          const call = () => { examples.fromTsvFile(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });
