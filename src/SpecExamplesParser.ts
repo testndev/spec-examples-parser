@@ -3,10 +3,46 @@ import GherkinFeatureFileParser from './parsers/GherkinFeatureFileParser';
 import JsonFileParser from './parsers/JsonFileParser';
 import DsvFileParser from './parsers/DsvFileParser';
 import GherkinFeatureTextParser from './parsers/GherkinFeatureTextParser';
+import MarkdownFileParser from './parsers/MarkdownFileParser';
 
 
 export class SpecExamplesParser {
 
+  static from(text: string, parsingOptions?: FileParsingOptions) {
+    if (text && text.trim().length > 0) {
+      if (text.trim().split(/\r?\n/).length === 1) {
+        return SpecExamplesParser.fromFile(text, parsingOptions)
+      }
+      else {
+        return SpecExamplesParser.fromGherkinFormatTable(text, parsingOptions)
+      }
+    }
+    else {
+      return []
+    }
+
+  }
+  static fromFile(filePath: string, parsingOptions?: FileParsingOptions) {
+    const fileExt = filePath.split('.').pop();
+    if (fileExt) {
+      switch (fileExt.toLowerCase()) {
+        case 'tsv':
+          return DsvFileParser.parseTsv(filePath, parsingOptions);
+        case 'csv':
+          return DsvFileParser.parseCsv(filePath, parsingOptions);
+        case 'md':
+        case 'markdown':
+          return MarkdownFileParser.parse(filePath, parsingOptions);
+        case 'spec':
+        case 'feature':
+          return GherkinFeatureFileParser.parse(filePath, parsingOptions);
+        case 'json':
+          return JsonFileParser.parse(filePath);
+        default:
+          return [];
+      }
+    }
+  }
   static fromJsonFile(filePath: string) {
     return JsonFileParser.parse(filePath);
   }
