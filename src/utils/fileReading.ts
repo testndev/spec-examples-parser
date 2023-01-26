@@ -20,4 +20,9 @@ function controlFileIsNotEmpty(filePath: string) {
   }
 }
 
-export { getFullText, controlFileIsNotEmpty };
+function getExtension(filePath: string) {
+  return (filePath.split('.').pop()||'').toLowerCase();
+
+}
+
+export { getExtension, getFullText, controlFileIsNotEmpty };
