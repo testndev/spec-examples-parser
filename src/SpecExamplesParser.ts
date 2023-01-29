@@ -9,6 +9,12 @@ import { controlFileIsNotEmpty, getExtension } from './utils/fileReading';
 
 export class SpecExamplesParser {
 
+/**
+ * Intelligent/magic `from()` method that parse any text or file to examples list
+ * @param text can be either a "file path" or a raw "examples table" in text format
+ * @param parsingOptions some optional configuration for parsing
+ * @returns an array of objects
+ */
   static from(text: string, parsingOptions?: FileParsingOptions) {
     if (text && text.trim().length > 0) {
       if (text.trim().split(/\r?\n/).length === 1) {
@@ -23,6 +29,7 @@ export class SpecExamplesParser {
     }
 
   }
+
   static fromFile(filePath: string, parsingOptions?: FileParsingOptions) {
     controlFileIsNotEmpty(filePath);
     switch (getExtension(filePath)) {
@@ -42,6 +49,7 @@ export class SpecExamplesParser {
         return [];
     }
   }
+
   static fromJsonFile(filePath: string) {
     return JsonFileParser.parse(filePath);
   }

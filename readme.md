@@ -40,7 +40,7 @@ import { SpecExamplesParser as examples } from '@testndev/spec-examples-parser';
 import { greetings } from '../greetings';
 
 describe(`Our_App respects local greetings formats for supported languages`, () => {
-  examples.fromGherkinFormatTable(`
+  examples.from(`
       name      | language | greetingWord | expectedPhrase
       Sébastien | french   | Bonjour      | "Bonjour Sébastien !"
       édouard   | english  | Hello        | Hello Édouard!
@@ -54,6 +54,12 @@ describe(`Our_App respects local greetings formats for supported languages`, () 
       });
     });
 });
+```
+
+our magic `.from()` method can consume [file](test/specexamples/csv/greetings-fr-es-en.csv), simply with file path:
+
+```typescript
+examples.from('test/specexamples/csv/greetings-fr-es-en.csv') //...
 ```
 
 executing this file will create and execute 3 tests, and return in terminal: 

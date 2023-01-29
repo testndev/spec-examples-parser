@@ -10,6 +10,12 @@ var fileReading_1 = require("./utils/fileReading");
 var SpecExamplesParser = /** @class */ (function () {
     function SpecExamplesParser() {
     }
+    /**
+     * Intelligent/magic `from()` method that parse any text or file to examples list
+     * @param text can be either a "file path" or a raw "examples table" in text format
+     * @param parsingOptions some optional configuration for parsing
+     * @returns an array of objects
+     */
     SpecExamplesParser.from = function (text, parsingOptions) {
         if (text && text.trim().length > 0) {
             if (text.trim().split(/\r?\n/).length === 1) {

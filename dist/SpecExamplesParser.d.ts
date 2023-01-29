@@ -1,5 +1,11 @@
 import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
 export declare class SpecExamplesParser {
+    /**
+     * Intelligent/magic `from()` method that parse any text or file to examples list
+     * @param text can be either a "file path" or a raw "examples table" in text format
+     * @param parsingOptions some optional configuration for parsing
+     * @returns an array of objects
+     */
     static from(text: string, parsingOptions?: FileParsingOptions): any;
     static fromFile(filePath: string, parsingOptions?: FileParsingOptions): any;
     static fromJsonFile(filePath: string): any;
