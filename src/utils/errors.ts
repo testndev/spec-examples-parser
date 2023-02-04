@@ -26,6 +26,10 @@ function throwNotFeatureFileError(filePath: string) {
   throw new Error(`"${filePath}" file is not a "feature" file`);
 }
 
+function throwNotMarkdownFileWithTablesError(filePath: string) {
+  throw new Error(`"${filePath}" file is not a "markdown" file with tables`);
+}
+
 function throwJsonNotRepresentingListError(filePath: string) {
   throw new Error(`"${filePath}" JSON file contains an object, not a list of objects`);
 }
@@ -41,6 +45,7 @@ export {
   throwEmptyTableInFileError,
   throwEmptyFileError,
   throwNotFeatureFileError,
+  throwNotMarkdownFileWithTablesError,
   throwNoEnoughScenarioOutlineInFileError,
   throwFailedToParseJsonFileError,
   throwJsonNotRepresentingListError

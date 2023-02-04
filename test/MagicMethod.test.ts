@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { examplesListOfGherkinExamples } from "./examplesListOfGherkinExamples";
-import { greetingsWithSpaces, simpleAbcValues, eatingCucumberLeft, abzWithOrdersAsNumber, eatingApplesLeft } from './expectedValues';
+import { greetingsWithSpaces, simpleAbcValues, eatingCucumberLeft, abzWithOrdersAsNumber, eatingApplesLeft, europeanCoutriesInfos } from './expectedValues';
 import { thenResultEqualsExpectedArray } from './helper/steps';
 
 
@@ -23,9 +23,7 @@ test.describe('Parsing textual Gherkin Example with magic method', () => {
                 return examples.from(textualInput);
               });
               await test.step('then result is equal to expected (see \'2-expected-result.json\' in attachment)', async () => {
-                ReportAttachments.addComparisonElements(testInfo, expectedList, result);
-                expect(Array.isArray(result)).toBe(true);
-                expect(result).toStrictEqual(expectedList);
+                await thenResultEqualsExpectedArray(testInfo, expectedList, result);
               });
             });
         });
@@ -69,6 +67,16 @@ test.describe('Parsing files with magic method', () => {
       expectedList: abzWithOrdersAsNumber,
     },
     {
+      testTitle: 'Markdown, first table by default',
+      inputFilePath: './test/specexamples/md/two-tables-countries.md',
+      expectedList: europeanCoutriesInfos,
+    },
+    {
+      testTitle: 'Markdown, table without "|"',
+      inputFilePath: './test/specexamples/md/without-pipes-european-countries.md',
+      expectedList: europeanCoutriesInfos,
+    },
+    {
       testTitle: 'non-empty TXT file',
       inputFilePath: './test/specexamples/unknownFileType.txt',
       expectedList: [],
@@ -85,10 +93,10 @@ test.describe('Parsing files with magic method', () => {
     });
 
 
-    test('Parsing blank text with magic method', async ({ }, testInfo) => {
-      const result = examples.from('   ');
-      await thenResultEqualsExpectedArray(testInfo, [], result);
-    });
+  test('Parsing blank text with magic method', async ({ }, testInfo) => {
+    const result = examples.from('   ');
+    await thenResultEqualsExpectedArray(testInfo, [], result);
+  });
 });
 
 

@@ -6,6 +6,15 @@ const greetingsWithSpaces = [
   { name: 'Samuel', language: 'danish', greetingWord: 'Hej', expectedPhrase: 'Hej Samuel!' },
 ];
 
+/**
+ * note: one the keys contains space 
+ */
+const europeanCoutriesInfos = [
+  { name: 'France', capital: 'Paris', currency: 'Euro', 'calling code': '+33'}, 
+  { name: 'Germany', capital: 'Berlin', currency: 'Euro', 'calling code': '+49'}, 
+  { name: 'Norway', capital: 'Oslo', currency: 'Norwegian krone', 'calling code': '+47'}, 
+];
+
 const eatingCucumberLeft = [
   { start: '12', eat: '5', left: '7' },
   { start: '20', eat: '5', left: '15' },
@@ -41,5 +50,6 @@ export {
   abzWithOrdersAsNumber,
   greetingsWithSpaces,
   eatingApplesLeft,
-  eatingCucumberLeft
+  eatingCucumberLeft,
+  europeanCoutriesInfos,
 }

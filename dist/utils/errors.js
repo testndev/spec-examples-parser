@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.throwJsonNotRepresentingListError = exports.throwFailedToParseJsonFileError = exports.throwNoEnoughScenarioOutlineInFileError = exports.throwNotFeatureFileError = exports.throwEmptyFileError = exports.throwEmptyTableInFileError = exports.throwEmptyTableInText = exports.throwEmptyText = void 0;
+exports.throwJsonNotRepresentingListError = exports.throwFailedToParseJsonFileError = exports.throwNoEnoughScenarioOutlineInFileError = exports.throwNotMarkdownFileWithTablesError = exports.throwNotFeatureFileError = exports.throwEmptyFileError = exports.throwEmptyTableInFileError = exports.throwEmptyTableInText = exports.throwEmptyText = void 0;
 function throwEmptyTableInText() {
     throw new Error("contains an empty table");
 }
@@ -28,6 +28,10 @@ function throwNotFeatureFileError(filePath) {
     throw new Error("\"".concat(filePath, "\" file is not a \"feature\" file"));
 }
 exports.throwNotFeatureFileError = throwNotFeatureFileError;
+function throwNotMarkdownFileWithTablesError(filePath) {
+    throw new Error("\"".concat(filePath, "\" file is not a \"markdown\" file with tables"));
+}
+exports.throwNotMarkdownFileWithTablesError = throwNotMarkdownFileWithTablesError;
 function throwJsonNotRepresentingListError(filePath) {
     throw new Error("\"".concat(filePath, "\" JSON file contains an object, not a list of objects"));
 }
