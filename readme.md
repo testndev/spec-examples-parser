@@ -39,29 +39,51 @@ No more chit-chat.
 
 Let's see a first sample using [Jest](https://jestjs.io/), with TypeScript test file containing:
 
+Instead of writing this:
+
+```typescript
+import { describe, expect, test } from '@jest/globals';
+import { greetings } from '../greetings';
+
+describe(`Our_App respects local greetings formats for supported languages`, () => {
+    [
+        { name: 'Sébastien', language: 'french', greetingWord: 'Bonjour', expectedPhrase: 'Bonjour Sébastien !' },
+        { name: 'édouard', language: 'english', greetingWord: 'Hello', expectedPhrase: 'Hello Édouard!' },
+        { name: 'ROSA', language: 'spanish', greetingWord: 'Hola', expectedPhrase: '¡Hola Rosa!' },
+    ].forEach(({ name, language, greetingWord, expectedPhrase }) => {
+        test(`Our_App says "${expectedPhrase}" to "${name}" in "${language}"`, () => {
+            const greetingsPhrase = greetings(name, language);
+            expect(greetingsPhrase).toContain(greetingWord);
+            expect(greetingsPhrase).toBe(expectedPhrase);
+        });
+    });
+});
+```
+
+*SpExParser* offers this (more human-readable) alternative: 
+
 ```typescript
 import { describe, expect, test } from '@jest/globals';
 import { SpecExamplesParser as examples } from '@testndev/spec-examples-parser';
 import { greetings } from '../greetings';
 
 describe(`Our_App respects local greetings formats for supported languages`, () => {
-  examples.from(`
+    examples.from(`
       name      | language | greetingWord | expectedPhrase
       Sébastien | french   | Bonjour      | "Bonjour Sébastien !"
       édouard   | english  | Hello        | Hello Édouard!
       ROSA      | spanish  | Hola         | ¡Hola Rosa!
-  `)
-    .forEach(({ name, language, greetingWord, expectedPhrase }) => {
-      test(`Our_App says "${expectedPhrase}" to "${name}" in "${language}"`, () => {
-        const greetingsPhrase = greetings(name, language);
-        expect(greetingsPhrase).toContain(greetingWord);
-        expect(greetingsPhrase).toBe(expectedPhrase);
-      });
+  `).forEach(({ name, language, greetingWord, expectedPhrase }) => {
+        test(`Our_App says "${expectedPhrase}" to "${name}" in "${language}"`, () => {
+            const greetingsPhrase = greetings(name, language);
+            expect(greetingsPhrase).toContain(greetingWord);
+            expect(greetingsPhrase).toBe(expectedPhrase);
+        });
     });
 });
 ```
 
-our magic `.from()` method can consume [file](test/specexamples/csv/greetings-fr-es-en.csv), simply with file path:
+Our magic `.from()` method can consume [file](test/specexamples/csv/greetings-fr-es-en.csv), simply with file path:
 
 ```typescript
 examples.from('test/specexamples/csv/greetings-fr-es-en.csv') //...
