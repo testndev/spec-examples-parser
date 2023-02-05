@@ -1,11 +1,11 @@
-# @testndev/spec-examples-parser
+# Specs' examples parser (*SpExParser*)
 
 [![License](https://img.shields.io/github/license/testndev/spec-examples-parser)](https://github.com/testndev/spec-examples-parser/blob/main/license.txt)
 [![NPM Downloads](https://img.shields.io/npm/dw/@testndev/spec-examples-parser)](https://www.npmjs.com/package/@testndev/spec-examples-parser)
 [![Last commit](https://img.shields.io/github/last-commit/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser)
 [![Issues](https://img.shields.io/github/issues/testndev/spec-examples-parser?style=flat-square&logo=github)](https://github.com/testndev/spec-examples-parser/issues)
 [![Build status](https://img.shields.io/github/actions/workflow/status/testndev/spec-examples-parser/ci.yaml)](https://github.com/testndev/spec-examples-parser/actions)
-
+[![codecov](https://codecov.io/gh/testndev/spec-examples-parser/branch/main/graph/badge.svg?token=MX4BJTNFIN)](https://codecov.io/gh/testndev/spec-examples-parser)
 
 **Specification examples parser for tests written in TypeScript**
 
@@ -26,6 +26,12 @@ Tested with those testing frameworks:
 - [Jest](https://jestjs.io/)
 - [Mocha](https://mochajs.org/)
 - [Playwright](https://playwright.dev/)
+
+## Install
+
+```
+npm install @testndev/spec-examples-parser
+```
 
 ## Samples
 
