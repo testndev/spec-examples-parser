@@ -9,6 +9,8 @@
 
 **Specification examples parser for tests written in TypeScript**
 
+![](SpExParser-logo.svg)
+
 `spec-examples-parser` is a simple parser that turns specification examples into treatable array of objects, for your TypeScript tests.
 
 Specification examples can be given:

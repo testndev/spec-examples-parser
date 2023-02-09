@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="250"
+   overflow="hidden"
+   version="1.1"
+   id="svg1332"
+   sodipodi:docname="SpExParser-logo.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1334"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.1578125"
+     inkscape:cx="527.7193"
+     inkscape:cy="285.88394"
+     inkscape:window-width="2520"
+     inkscape:window-height="1574"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4158" />
+  <defs
+     id="defs1254">
+    <filter
+       id="fx0"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1088">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1080" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1082" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1084" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1086" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1090" />
+    </filter>
+    <filter
+       id="fx1"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1101">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1093" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1095" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1097" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1099" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1103" />
+    </filter>
+    <filter
+       id="fx2"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1114">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1106" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1108" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1110" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1112" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1116" />
+    </filter>
+    <filter
+       id="fx3"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1127">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1119" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1121" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1123" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1125" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1129" />
+    </filter>
+    <filter
+       id="fx4"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1140">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1132" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1134" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1136" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1138" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1142" />
+    </filter>
+    <filter
+       id="fx5"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1153">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1145" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1147" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1149" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1151" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1155" />
+    </filter>
+    <filter
+       id="fx6"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1166">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1158" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1160" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1162" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1164" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1168" />
+    </filter>
+    <filter
+       id="fx7"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1179">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1171" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1173" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1175" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1177" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1181" />
+    </filter>
+    <filter
+       id="fx8"
+       x="-128"
+       y="-72"
+       width="1536"
+       height="864.00006"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1192">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1184" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1186" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1188" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1190" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1194" />
+    </filter>
+    <clipPath
+       id="clip9">
+      <rect
+         x="0"
+         y="0"
+         width="1280"
+         height="720"
+         id="rect1197" />
+    </clipPath>
+    <clipPath
+       id="clip10">
+      <rect
+         x="62"
+         y="54"
+         width="55"
+         height="92"
+         id="rect1200" />
+    </clipPath>
+    <clipPath
+       id="clip11">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1203" />
+    </clipPath>
+    <clipPath
+       id="clip12">
+      <rect
+         x="70"
+         y="50"
+         width="43"
+         height="104"
+         id="rect1206" />
+    </clipPath>
+    <clipPath
+       id="clip13">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1209" />
+    </clipPath>
+    <clipPath
+       id="clip14">
+      <rect
+         x="62"
+         y="58"
+         width="110"
+         height="96"
+         id="rect1212" />
+    </clipPath>
+    <clipPath
+       id="clip15">
+      <rect
+         x="0"
+         y="0"
+         width="234"
+         height="217"
+         id="rect1215" />
+    </clipPath>
+    <clipPath
+       id="clip16">
+      <rect
+         x="70"
+         y="50"
+         width="41"
+         height="104"
+         id="rect1218" />
+    </clipPath>
+    <clipPath
+       id="clip17">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1221" />
+    </clipPath>
+    <clipPath
+       id="clip18">
+      <rect
+         x="72"
+         y="54"
+         width="43"
+         height="81"
+         id="rect1224" />
+    </clipPath>
+    <clipPath
+       id="clip19">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1227" />
+    </clipPath>
+    <clipPath
+       id="clip20">
+      <rect
+         x="66"
+         y="58"
+         width="145"
+         height="77"
+         id="rect1230" />
+    </clipPath>
+    <clipPath
+       id="clip21">
+      <rect
+         x="0"
+         y="0"
+         width="288"
+         height="217"
+         id="rect1233" />
+    </clipPath>
+    <clipPath
+       id="clip22">
+      <rect
+         x="64"
+         y="54"
+         width="53"
+         height="55"
+         id="rect1236" />
+    </clipPath>
+    <clipPath
+       id="clip23">
+      <rect
+         x="0"
+         y="0"
+         width="181"
+         height="217"
+         id="rect1239" />
+    </clipPath>
+    <clipPath
+       id="clip24">
+      <rect
+         x="64"
+         y="58"
+         width="322"
+         height="77"
+         id="rect1242" />
+    </clipPath>
+    <clipPath
+       id="clip25">
+      <rect
+         x="0"
+         y="0"
+         width="446"
+         height="217"
+         id="rect1245" />
+    </clipPath>
+    <clipPath
+       id="clip26">
+      <rect
+         x="62"
+         y="54"
+         width="55"
+         height="92"
+         id="rect1248" />
+    </clipPath>
+    <clipPath
+       id="clip27">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1251" />
+    </clipPath>
+    <clipPath
+       id="clip10-9">
+      <rect
+         x="62"
+         y="54"
+         width="55"
+         height="92"
+         id="rect1200-4" />
+    </clipPath>
+    <filter
+       id="fx0-8"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1088-0">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1080-1" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1082-4" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1084-9" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1086-3" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1090-1" />
+    </filter>
+    <clipPath
+       id="clip11-9">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1203-5" />
+    </clipPath>
+    <clipPath
+       id="clip12-1">
+      <rect
+         x="70"
+         y="50"
+         width="43"
+         height="104"
+         id="rect1206-2" />
+    </clipPath>
+    <filter
+       id="fx1-2"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1101-5">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1093-7" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1095-8" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1097-2" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1099-9" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1103-1" />
+    </filter>
+    <clipPath
+       id="clip13-9">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1209-9" />
+    </clipPath>
+    <clipPath
+       id="clip16-7">
+      <rect
+         x="70"
+         y="50"
+         width="41"
+         height="104"
+         id="rect1218-1" />
+    </clipPath>
+    <filter
+       id="fx3-6"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1127-7">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1119-1" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1121-3" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1123-4" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1125-1" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1129-7" />
+    </filter>
+    <clipPath
+       id="clip17-8">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1221-8" />
+    </clipPath>
+    <clipPath
+       id="clip18-1">
+      <rect
+         x="72"
+         y="54"
+         width="43"
+         height="81"
+         id="rect1224-5" />
+    </clipPath>
+    <filter
+       id="fx4-5"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1140-3">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1132-0" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1134-5" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1136-0" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1138-5" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1142-3" />
+    </filter>
+    <clipPath
+       id="clip19-7">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1227-3" />
+    </clipPath>
+    <clipPath
+       id="clip22-4">
+      <rect
+         x="64"
+         y="54"
+         width="53"
+         height="55"
+         id="rect1236-2" />
+    </clipPath>
+    <filter
+       id="fx6-0"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1166-4">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1158-2" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1160-2" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1162-3" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1164-1" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1168-2" />
+    </filter>
+    <clipPath
+       id="clip23-2">
+      <rect
+         x="0"
+         y="0"
+         width="181"
+         height="217"
+         id="rect1239-1" />
+    </clipPath>
+    <clipPath
+       id="clip26-2">
+      <rect
+         x="62"
+         y="54"
+         width="55"
+         height="92"
+         id="rect1248-4" />
+    </clipPath>
+    <filter
+       id="fx8-2"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1192-1">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1184-1" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1186-6" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1188-3" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1190-6" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1194-0" />
+    </filter>
+    <clipPath
+       id="clip27-1">
+      <rect
+         x="0"
+         y="0"
+         width="182"
+         height="217"
+         id="rect1251-1" />
+    </clipPath>
+    <clipPath
+       id="clip14-4">
+      <rect
+         x="62"
+         y="58"
+         width="110"
+         height="96"
+         id="rect1212-7" />
+    </clipPath>
+    <filter
+       id="fx2-1"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1114-7">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1106-0" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1108-0" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1110-6" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1112-8" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1116-2" />
+    </filter>
+    <clipPath
+       id="clip15-1">
+      <rect
+         x="0"
+         y="0"
+         width="234"
+         height="217"
+         id="rect1215-0" />
+    </clipPath>
+    <clipPath
+       id="clip20-9">
+      <rect
+         x="66"
+         y="58"
+         width="145"
+         height="77"
+         id="rect1230-5" />
+    </clipPath>
+    <filter
+       id="fx5-6"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1153-6">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1145-9" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1147-6" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1149-7" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1151-8" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1155-1" />
+    </filter>
+    <clipPath
+       id="clip21-7">
+      <rect
+         x="0"
+         y="0"
+         width="288"
+         height="217"
+         id="rect1233-3" />
+    </clipPath>
+    <clipPath
+       id="clip24-5">
+      <rect
+         x="64"
+         y="58"
+         width="322"
+         height="77"
+         id="rect1242-6" />
+    </clipPath>
+    <filter
+       id="fx7-9"
+       x="-30"
+       y="-15"
+       width="360"
+       height="180"
+       filterUnits="userSpaceOnUse"
+       primitiveUnits="userSpaceOnUse">
+      <feComponentTransfer
+         color-interpolation-filters="sRGB"
+         id="feComponentTransfer1179-8">
+        <feFuncR
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncR1171-2" />
+        <feFuncG
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncG1173-6" />
+        <feFuncB
+           type="discrete"
+           tableValues="0 0"
+           id="feFuncB1175-6" />
+        <feFuncA
+           type="linear"
+           slope="0.4"
+           intercept="0"
+           id="feFuncA1177-3" />
+      </feComponentTransfer>
+      <feGaussianBlur
+         stdDeviation="1.70758 1.70758"
+         id="feGaussianBlur1181-4" />
+    </filter>
+    <clipPath
+       id="clip25-4">
+      <rect
+         x="0"
+         y="0"
+         width="446"
+         height="217"
+         id="rect1245-9" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#clip9)"
+     id="g1330">
+    <g
+       id="g4158"
+       transform="translate(-180.51283,-242.69907)">
+      <rect
+         x="180.51283"
+         y="242.69907"
+         width="1000"
+         height="250"
+         fill="#ffffff"
+         id="rect1256"
+         style="stroke-width:1" />
+      <g
+         id="g4885"
+         transform="translate(16.51283,-17.30093)">
+        <g
+           clip-path="url(#clip10-9)"
+           filter="url(#fx0)"
+           transform="translate(152,283)"
+           id="g1262"
+           style="filter:url(#fx0-8)">
+          <g
+             clip-path="url(#clip11-9)"
+             id="g1260">
+            <path
+               d="M 45.3281,-66.2344 13.1719,10.0781 H 5.39062 L 37.5469,-66.2344 Z"
+               fill="#811f3f"
+               transform="translate(64.5051,127)"
+               id="path1258" />
+          </g>
+        </g>
+        <g
+           clip-path="url(#clip12-1)"
+           filter="url(#fx1)"
+           transform="translate(205,283)"
+           id="g1270"
+           style="filter:url(#fx1-2)">
+          <g
+             clip-path="url(#clip13-9)"
+             id="g1268">
+            <path
+               d="M 35.6719,19.6875 C 21.2656,6.34375 14.0625,-8.40625 14.0625,-24.5625 c 0,-3.7812 0.3828,-7.5547 1.1484,-11.3203 0.7657,-3.7656 2,-7.5391 3.7032,-11.3203 1.7031,-3.7813 3.9531,-7.5625 6.75,-11.3438 2.7968,-3.7812 6.1953,-7.5312 10.1953,-11.25 l 4.7344,4.8281 C 28.4688,-53 22.4062,-39.7344 22.4062,-25.1719 c 0,7.25 1.5313,14.2188 4.5938,20.90628 3.0625,6.68749 7.5938,13 13.5938,18.93752 z"
+               fill="#d16969"
+               transform="translate(64.3384,127)"
+               id="path1266" />
+          </g>
+        </g>
+        <g
+           clip-path="url(#clip16-7)"
+           filter="url(#fx3)"
+           transform="translate(363,283)"
+           id="g1286"
+           style="filter:url(#fx3-6)">
+          <g
+             clip-path="url(#clip17-8)"
+             id="g1284">
+            <path
+               d="m 17.1094,-69.7969 c 14.4062,13.3438 21.6094,28.1875 21.6094,44.5313 0,3.375 -0.3438,6.875 -1.0313,10.5 C 37,-11.1406 35.8281,-7.42969 34.1719,-3.63281 32.5156,0.164062 30.2891,4.01562 27.4922,7.92188 24.6953,11.8281 21.1719,15.75 16.9219,19.6875 L 12.1875,14.8594 C 18.2812,8.82812 22.8281,2.53125 25.8281,-4.03125 c 3,-6.56245 4.5,-13.43755 4.5,-20.62495 0,-14.875 -6.0469,-28.25 -18.1406,-40.125 z"
+               fill="#d16969"
+               transform="translate(64.8384,127)"
+               id="path1282" />
+          </g>
+        </g>
+        <g
+           clip-path="url(#clip18-1)"
+           filter="url(#fx4)"
+           transform="translate(416,283)"
+           id="g1294"
+           style="filter:url(#fx4-5)">
+          <g
+             clip-path="url(#clip19-7)"
+             id="g1292">
+            <path
+               d="m 43.2188,-45.4219 c 0,5.0625 -1.4063,8.8985 -4.2188,11.5078 -2.8125,2.6094 -6.8906,4.086 -12.2344,4.4297 l -0.375,11.5313 h -6.9844 l -0.6093,-17.9531 h 5.4843 c 1.9063,0 3.5,-0.2032 4.7813,-0.6094 1.2812,-0.4063 2.3125,-0.9844 3.0937,-1.7344 0.7813,-0.75 1.3438,-1.6641 1.6876,-2.7422 0.3437,-1.0781 0.5156,-2.289 0.5156,-3.6328 0,-2.2812 -0.4688,-4.3125 -1.4063,-6.0938 -0.9375,-1.7812 -2.25,-3.2812 -3.9375,-4.5 -1.6875,-1.2187 -3.6953,-2.1406 -6.0234,-2.7656 -2.3281,-0.625 -4.8672,-0.9375 -7.6172,-0.9375 h -1.1719 v -7.3125 h 1.2657 c 3.1562,0 6.039,0.2969 8.6484,0.8906 2.6094,0.5938 4.9375,1.3985 6.9844,2.4141 2.0468,1.0156 3.8281,2.211 5.3437,3.5859 1.5156,1.3751 2.7813,2.8282 3.7969,4.3594 1.0156,1.5313 1.7656,3.1172 2.25,4.7578 0.4844,1.6407 0.7266,3.2422 0.7266,4.8047 z m -20.3907,33.8907 c 0.875,0 1.6875,0.164 2.4375,0.4921 0.75,0.3282 1.3985,0.7735 1.9453,1.33598 0.5469,0.5625 0.9766,1.22656 1.2891,1.99218 0.3125,0.76563 0.4687,1.57032 0.4688,2.41406 -1e-4,0.84376 -0.1563,1.64063 -0.4688,2.39063 -0.3125,0.75 -0.7422,1.39844 -1.2891,1.945312 -0.5468,0.546876 -1.1953,0.9843755 -1.9453,1.3125 -0.75,0.328125 -1.5625,0.492188 -2.4375,0.492188 -0.8437,0 -1.6406,-0.164063 -2.3906,-0.492188 -0.75,-0.3281245 -1.4063,-0.765624 -1.9687,-1.3125 -0.5626,-0.546872 -1,-1.195312 -1.3126,-1.945312 -0.3124,-0.75 -0.4687,-1.54687 -0.4687,-2.39063 0,-0.84374 0.1563,-1.64843 0.4687,-2.41406 0.3126,-0.76562 0.75,-1.42968 1.3126,-1.99218 0.5624,-0.56248 1.2187,-1.00778 1.9687,-1.33598 0.75,-0.3281 1.5469,-0.4921 2.3906,-0.4921 z"
+               transform="translate(64.6718,127)"
+               id="path1290" />
+          </g>
+        </g>
+        <g
+           clip-path="url(#clip22-4)"
+           filter="url(#fx6)"
+           transform="translate(628,283)"
+           id="g1310"
+           style="filter:url(#fx6-0)">
+          <g
+             clip-path="url(#clip23-2)"
+             id="g1308">
+            <path
+               d="m 45.0469,-39.375 -3.1875,5.5781 -13.1719,-8.7187 1.0781,16.0312 h -6.7031 l 1.0313,-16.0312 -13.4532,8.7187 -2.9531,-5.4843 14.3906,-7.0782 -14.3906,-7.2187 3.2344,-5.4844 13.2656,8.8594 -1.125,-16.0313 h 6.7031 l -1.1718,16.0313 13.2656,-8.9531 3.2812,5.7656 -14.4375,7.125 z"
+               transform="translate(64.0051,127)"
+               id="path1306" />
+          </g>
+        </g>
+        <g
+           clip-path="url(#clip26-2)"
+           filter="url(#fx8)"
+           transform="translate(997,283)"
+           id="g1326"
+           style="filter:url(#fx8-2)">
+          <g
+             clip-path="url(#clip27-1)"
+             id="g1324">
+            <path
+               d="M 45.3281,-66.2344 13.1719,10.0781 H 5.39062 L 37.5469,-66.2344 Z"
+               fill="#811f3f"
+               transform="translate(64.8384,127)"
+               id="path1322" />
+          </g>
+        </g>
+        <g
+           id="g4038">
+          <text
+             fill="#811f3f"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(213.785,407)"
+             id="text1264">/</text>
+          <text
+             fill="#d16969"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(266.619,407)"
+             id="text1272">(</text>
+          <g
+             clip-path="url(#clip14-4)"
+             filter="url(#fx2)"
+             transform="translate(258,283)"
+             id="g1278"
+             style="filter:url(#fx2-1)">
+            <g
+               clip-path="url(#clip15-1)"
+               id="g1276">
+              <path
+                 d="m 46.7344,-16.5938 c 0,2.9063 -0.5938,5.4532 -1.7813,7.64068 -1.1875,2.1875 -2.8437,4.00781 -4.9687,5.46093 -2.125,1.45313 -4.6797,2.539065 -7.6641,3.257815 -2.9844,0.71875 -6.2734,1.078125 -9.8672,1.078125 -1.625,0 -3.2422,-0.0625 -4.8515,-0.1875 C 15.9922,0.53125 14.4453,0.375 12.9609,0.1875 11.4766,0 10.0781,-0.21875 8.76562,-0.46875 c -1.3125,-0.25 -2.5,-0.515625 -3.5625,-0.79687 v -8.0625 c 2.34375,0.875 4.97658,1.5625 7.89848,2.0625 2.9218,0.5 6.2422,0.75 9.9609,0.75 2.6875,0 4.9766,-0.21094 6.8672,-0.63282 1.8906,-0.42187 3.4375,-1.04687 4.6406,-1.875 1.2031,-0.82812 2.0781,-1.83596 2.625,-3.02346 0.5469,-1.1875 0.8203,-2.5468 0.8203,-4.0781 0,-1.6562 -0.4609,-3.0703 -1.3828,-4.2422 C 35.7109,-21.5391 34.5,-22.5859 33,-23.5078 c -1.5,-0.9219 -3.2109,-1.7656 -5.1328,-2.5313 -1.9219,-0.7656 -3.8828,-1.5546 -5.8828,-2.3671 -2,-0.8125 -3.961,-1.6954 -5.8828,-2.6485 -1.9219,-0.9531 -3.6329,-2.0781 -5.1328,-3.375 C 9.46875,-35.7266 8.25781,-37.25 7.33594,-39 c -0.92188,-1.75 -1.38282,-3.8281 -1.38282,-6.2344 0,-2.0937 0.4375,-4.1562 1.3125,-6.1875 0.875,-2.0312 2.23438,-3.8359 4.07818,-5.414 1.8437,-1.5782 4.2109,-2.8516 7.1015,-3.8203 2.8906,-0.9688 6.3359,-1.4532 10.3359,-1.4532 1.0313,0 2.1485,0.0469 3.3516,0.1406 1.2031,0.0938 2.4219,0.2266 3.6563,0.3985 1.2343,0.1719 2.4531,0.3672 3.6562,0.5859 1.2031,0.2188 2.3203,0.4532 3.3516,0.7032 v 7.5 c -2.4063,-0.6875 -4.8125,-1.211 -7.2188,-1.5704 -2.4062,-0.3593 -4.7344,-0.539 -6.9843,-0.539 -4.7813,0 -8.2969,0.7969 -10.5469,2.3906 -2.25,1.5938 -3.375,3.7344 -3.375,6.4219 0,1.6562 0.4609,3.0781 1.3828,4.2656 0.9219,1.1875 2.1328,2.25 3.6328,3.1875 1.5,0.9375 3.2109,1.7891 5.1328,2.5547 1.9219,0.7656 3.8828,1.5547 5.8828,2.3672 2,0.8125 3.961,1.7031 5.8828,2.6719 1.9219,0.9687 3.6329,2.1171 5.1329,3.4453 1.5,1.3281 2.7109,2.8828 3.6328,4.664 0.9218,1.7813 1.3828,3.8907 1.3828,6.3281 z m 53.8176,-7.7812 c 0,4.1875 -0.5859,7.8438 -1.7577,10.9688 -1.1719,3.125 -2.7891,5.7187 -4.8516,7.7812 -2.0625,2.0625 -4.5,3.60938 -7.3125,4.640625 -2.8125,1.03125 -5.8594,1.546875 -9.1406,1.546875 -1.5,0 -2.9922,-0.078125 -4.4766,-0.234375 C 71.5286,0.171875 70.0208,-0.09375 68.4896,-0.46875 V 19.2188 h -8.1563 v -66.2813 h 7.2657 l 0.5156,7.875 c 2.3437,-3.2187 4.8437,-5.4766 7.5,-6.7734 2.6562,-1.2969 5.5312,-1.9453 8.625,-1.9453 2.6875,0 5.0469,0.5624 7.0781,1.6874 2.0313,1.125 3.7344,2.711 5.1094,4.7579 1.375,2.0468 2.4062,4.5156 3.0937,7.4062 0.6872,2.8906 1.0312,6.1172 1.0312,9.6797 z M 92.2083,-24 c 0,-2.4687 -0.1797,-4.7344 -0.539,-6.7969 -0.3594,-2.0625 -0.9297,-3.8281 -1.711,-5.2969 -0.7812,-1.4687 -1.7812,-2.6171 -3,-3.4453 -1.2187,-0.8281 -2.6718,-1.2421 -4.3593,-1.2421 -1.0313,0 -2.0782,0.164 -3.1407,0.4921 -1.0625,0.3282 -2.164,0.875 -3.3047,1.6407 -1.1406,0.7656 -2.3437,1.7812 -3.6093,3.0468 -1.2657,1.2657 -2.6172,2.836 -4.0547,4.711 v 22.8281 c 1.5,0.625 3.0781,1.11719 4.7344,1.47656 1.6562,0.35938 3.2812,0.53907 4.875,0.53906 4.4062,10e-6 7.8593,-1.49218 10.3593,-4.47652 2.5,-2.9844 3.75,-7.4766 3.75,-13.4766 z"
+                 fill="#811f3f"
+                 transform="translate(64.1718,127)"
+                 id="path1274" />
+            </g>
+          </g>
+          <text
+             fill="#811f3f"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(319.452,407)"
+             id="text1280">Sp</text>
+          <text
+             fill="#d16969"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(425.119,407)"
+             id="text1288">)</text>
+          <text
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(477.952,407)"
+             id="text1296">?</text>
+          <g
+             clip-path="url(#clip20-9)"
+             filter="url(#fx5)"
+             transform="translate(469,283)"
+             id="g1302"
+             style="filter:url(#fx5-6)">
+            <g
+               clip-path="url(#clip21-7)"
+               id="g1300">
+              <path
+                 d="M 44.25,0 H 9.42188 V -61.2656 H 44.25 v 7.0312 H 17.7656 V -35.25 h 25.4532 v 7.0312 H 17.7656 V -7.125 H 44.25 Z m 58.505,0 H 91.9271 L 79.224,-17.9531 66.6615,0 H 56.1146 L 74.349,-23.625 56.9583,-47.0625 h 10.4532 l 12.375,18.0937 12.1406,-18.0937 h 10.0779 l -17.6717,23.625 z m 28.927,-14.7656 c 1.063,0 2.071,0.2031 3.024,0.6094 0.953,0.4062 1.781,0.9687 2.484,1.6874 0.703,0.7188 1.258,1.5547 1.664,2.50786 0.406,0.95313 0.61,1.97657 0.61,3.07032 0,1.0625 -0.204,2.0625 -0.61,3 -0.406,0.9375 -0.961,1.75781 -1.664,2.46093 -0.703,0.703128 -1.531,1.257815 -2.484,1.664065 -0.953,0.40625 -1.961,0.609375 -3.024,0.609375 -1.093,0 -2.109,-0.203125 -3.047,-0.609375 -0.937,-0.40625 -1.757,-0.960937 -2.461,-1.664065 -0.703,-0.70312 -1.257,-1.52343 -1.664,-2.46093 -0.406,-0.9375 -0.609,-1.9375 -0.609,-3 0,-1.09375 0.203,-2.11719 0.609,-3.07032 0.407,-0.95316 0.961,-1.78906 1.664,-2.50786 0.704,-0.7187 1.524,-1.2812 2.461,-1.6874 0.938,-0.4063 1.954,-0.6094 3.047,-0.6094 z"
+                 fill="#811f3f"
+                 transform="translate(64.5051,127)"
+                 id="path1298" />
+            </g>
+          </g>
+          <text
+             fill="#811f3f"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(530.785,407)"
+             id="text1304">Ex.</text>
+          <text
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(689.285,407)"
+             id="text1312">*</text>
+          <g
+             clip-path="url(#clip24-5)"
+             filter="url(#fx7)"
+             transform="translate(680,283)"
+             id="g1318"
+             style="filter:url(#fx7-9)">
+            <g
+               clip-path="url(#clip25-4)"
+               id="g1316">
+              <path
+                 d="m 47.625,-42.5156 c 0,2.5 -0.4688,4.9765 -1.4062,7.4297 -0.9376,2.4531 -2.3907,4.6484 -4.3594,6.5859 -1.9688,1.9375 -4.4844,3.5078 -7.5469,4.7109 -3.0625,1.2032 -6.7188,1.8047 -10.9687,1.8047 H 15.75 V 0 H 7.40625 V -61.2656 H 24.6562 c 3.0313,0 5.9375,0.3359 8.7188,1.0078 2.7812,0.6719 5.2266,1.7578 7.3359,3.2578 2.1094,1.5 3.7891,3.4375 5.0391,5.8125 1.25,2.375 1.875,5.2656 1.875,8.6719 z m -8.6719,0.375 c 0,-3.9375 -1.289,-6.9531 -3.8672,-9.0469 -2.5781,-2.0937 -6.1797,-3.1406 -10.8047,-3.1406 H 15.75 v 25.2187 h 7.7812 c 4.9375,0 8.7422,-1.0781 11.4141,-3.2344 2.6719,-2.1562 4.0078,-5.4218 4.0078,-9.7968 z M 90.5677,0 90.3802,-6.32812 c -2.5625,2.53124 -5.1641,4.35937 -7.8047,5.48437 -2.6406,1.125 -5.414,1.6875 -8.3203,1.6875 -2.6875,0 -4.9844,-0.34375 -6.8906,-1.03125 -1.9063,-0.6875 -3.4766,-1.63281 -4.711,-2.83594 -1.2343,-1.20312 -2.1406,-2.61718 -2.7187,-4.24218 -0.5781,-1.625 -0.8672,-3.39058 -0.8672,-5.29688 0,-4.7187 1.7578,-8.4141 5.2734,-11.0859 3.5157,-2.6719 8.711,-4.0078 15.586,-4.0078 h 9.75 v -4.125 c 0,-2.7813 -0.8906,-5.0079 -2.6719,-6.6797 -1.7812,-1.6719 -4.5,-2.5079 -8.1562,-2.5079 -2.6563,0 -5.2735,0.2969 -7.8516,0.8907 -2.5781,0.5937 -5.2422,1.4375 -7.9922,2.5312 v -7.3593 c 1.0313,-0.375 2.1797,-0.7422 3.4453,-1.1016 1.2656,-0.3594 2.6016,-0.6797 4.0078,-0.961 1.4063,-0.2812 2.875,-0.5078 4.4063,-0.6796 1.5312,-0.1719 3.0781,-0.2578 4.6406,-0.2578 2.8438,0 5.4063,0.3124 7.6875,0.9374 2.2813,0.625 4.2109,1.5782 5.7891,2.8594 1.5781,1.2813 2.789,2.8906 3.6328,4.8282 0.8437,1.9374 1.2656,4.2187 1.2656,6.8437 V 0 Z M 89.6771,-21.4219 H 79.3177 c -2.0312,0 -3.7812,0.2031 -5.25,0.6094 -1.4687,0.4063 -2.6719,0.9844 -3.6094,1.7344 -0.9375,0.75 -1.6328,1.6484 -2.0859,2.6953 -0.4531,1.0469 -0.6797,2.2266 -0.6797,3.539 0,0.9063 0.1406,1.7735 0.4219,2.6016 0.2812,0.82814 0.7344,1.56251 1.3594,2.20314 0.625,0.64062 1.4375,1.14844 2.4375,1.52344 1,0.375 2.2187,0.5625 3.6562,0.5625 1.875,0 4.0234,-0.57032 6.4453,-1.71094 2.4219,-1.14063 4.9766,-2.94534 7.6641,-5.41404 z m 25.4119,-25.6406 h 7.453 l 0.234,8.6719 c 2.781,-3.3438 5.523,-5.7656 8.227,-7.2656 2.703,-1.5 5.429,-2.25 8.179,-2.25 4.875,0 8.571,1.5781 11.086,4.7343 2.516,3.1563 3.68,7.8438 3.492,14.0625 h -8.25 c 0.094,-4.125 -0.507,-7.1172 -1.804,-8.9765 -1.297,-1.8594 -3.196,-2.7891 -5.696,-2.7891 -1.093,0 -2.195,0.1953 -3.304,0.5859 -1.11,0.3907 -2.25,1.0157 -3.422,1.875 -1.172,0.8594 -2.414,1.961 -3.727,3.3047 -1.312,1.3438 -2.718,2.9688 -4.218,4.875 V 0 h -8.25 z m 88.177,34.2187 c 0,1.6563 -0.282,3.14068 -0.844,4.45318 -0.563,1.3125 -1.328,2.47656 -2.297,3.49218 -0.969,1.01563 -2.094,1.88282 -3.375,2.60156 -1.281,0.71876 -2.648,1.312505 -4.102,1.781255 -1.453,0.46875 -2.945,0.8125 -4.476,1.03125 -1.531,0.21875 -3.031,0.328125 -4.5,0.328125 -3.188,0 -6.117,-0.140625 -8.789,-0.421875 -2.672,-0.28125 -5.289,-0.734375 -7.852,-1.359375 v -7.5 c 2.75,0.78125 5.485,1.375 8.203,1.78125 2.719,0.40625 5.422,0.60938 8.11,0.60937 3.906,10e-6 6.797,-0.53124 8.672,-1.59374 1.875,-1.0625 2.812,-2.57818 2.812,-4.54688 0,-0.8437 -0.148,-1.6016 -0.445,-2.2734 -0.297,-0.6719 -0.836,-1.3125 -1.617,-1.9219 -0.782,-0.6094 -1.993,-1.2422 -3.633,-1.8984 -1.641,-0.6563 -3.883,-1.4063 -6.727,-2.25 -2.125,-0.625 -4.086,-1.336 -5.883,-2.1329 -1.796,-0.7968 -3.351,-1.7421 -4.664,-2.8359 -1.312,-1.0937 -2.343,-2.375 -3.093,-3.8438 -0.75,-1.4687 -1.125,-3.2031 -1.125,-5.2031 0,-1.3125 0.304,-2.75 0.914,-4.3125 0.609,-1.5625 1.648,-3.0156 3.117,-4.3594 1.469,-1.3437 3.453,-2.4609 5.953,-3.3515 2.5,-0.8906 5.625,-1.3359 9.375,-1.3359 1.844,0 3.891,0.1015 6.141,0.3046 2.25,0.2032 4.593,0.5547 7.031,1.0547 v 7.2657 c -2.563,-0.625 -4.992,-1.086 -7.289,-1.3829 -2.297,-0.2968 -4.289,-0.4453 -5.977,-0.4453 -2.031,0 -3.742,0.1563 -5.133,0.4688 -1.39,0.3125 -2.515,0.7422 -3.375,1.289 -0.859,0.5469 -1.476,1.1875 -1.851,1.9219 -0.375,0.7344 -0.563,1.5235 -0.563,2.3672 0,0.8437 0.164,1.6094 0.493,2.2969 0.328,0.6875 0.937,1.3515 1.828,1.9922 0.89,0.6406 2.133,1.2812 3.726,1.9218 1.594,0.6407 3.672,1.336 6.235,2.086 2.781,0.8125 5.125,1.664 7.031,2.5547 1.906,0.8906 3.453,1.8828 4.641,2.9765 1.187,1.0938 2.039,2.3282 2.554,3.7032 0.516,1.375 0.774,2.9375 0.774,4.6874 z m 55.317,-13.1718 c 0,1.1562 -0.015,2.125 -0.047,2.9062 -0.031,0.7813 -0.078,1.5156 -0.14,2.2032 h -33.047 c 0,4.8124 1.344,8.5078 4.031,11.08589 2.688,2.57812 6.563,3.86719 11.625,3.86719 1.375,0 2.75,-0.05469 4.125,-0.16407 1.375,-0.10937 2.703,-0.25781 3.985,-0.44531 1.281,-0.1875 2.507,-0.39844 3.679,-0.63281 1.172,-0.23438 2.258,-0.49219 3.258,-0.77344 v 6.70313 c -2.219,0.624995 -4.726,1.132808 -7.523,1.523432 -2.797,0.390625 -5.696,0.585938 -8.696,0.585938 -4.031,0 -7.5,-0.546875 -10.406,-1.640625 -2.906,-1.093745 -5.289,-2.679685 -7.148,-4.757815 -1.86,-2.07812 -3.235,-4.62501 -4.125,-7.64061 -0.891,-3.0156 -1.336,-6.4297 -1.336,-10.2422 0,-3.3125 0.476,-6.4453 1.429,-9.3984 0.954,-2.9532 2.344,-5.5469 4.172,-7.7813 1.828,-2.2344 4.071,-4.0078 6.727,-5.3203 2.656,-1.3125 5.672,-1.9687 9.047,-1.9687 3.281,0 6.187,0.5156 8.718,1.5468 2.532,1.0313 4.665,2.4922 6.399,4.3828 1.734,1.8907 3.047,4.1875 3.937,6.8907 0.891,2.7031 1.336,5.7265 1.336,9.0703 z m -8.484,-1.1719 c 0.094,-2.0937 -0.109,-4.0078 -0.609,-5.7422 -0.5,-1.7344 -1.274,-3.2265 -2.321,-4.4765 -1.047,-1.25 -2.351,-2.2266 -3.914,-2.9297 -1.562,-0.7032 -3.375,-1.0547 -5.437,-1.0547 -1.782,0 -3.407,0.3437 -4.875,1.0312 -1.469,0.6875 -2.735,1.6563 -3.797,2.9063 -1.063,1.25 -1.922,2.75 -2.578,4.5 -0.657,1.75 -1.063,3.6719 -1.219,5.7656 z m 23.49,-19.875 h 7.453 l 0.234,8.6719 c 2.781,-3.3438 5.523,-5.7656 8.227,-7.2656 2.703,-1.5 5.429,-2.25 8.179,-2.25 4.875,0 8.571,1.5781 11.086,4.7343 2.516,3.1563 3.68,7.8438 3.492,14.0625 h -8.25 c 0.094,-4.125 -0.507,-7.1172 -1.804,-8.9765 -1.297,-1.8594 -3.196,-2.7891 -5.696,-2.7891 -1.093,0 -2.195,0.1953 -3.304,0.5859 -1.11,0.3907 -2.25,1.0157 -3.422,1.875 -1.172,0.8594 -2.414,1.961 -3.727,3.3047 -1.312,1.3438 -2.718,2.9688 -4.218,4.875 V 0 h -8.25 z"
+                 fill="#811f3f"
+                 transform="translate(64.8384,127)"
+                 id="path1314" />
+            </g>
+          </g>
+          <text
+             fill="#811f3f"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(742.119,407)"
+             id="text1320">Parser</text>
+          <text
+             fill="#811f3f"
+             font-family="Consolas, Consolas_MSFontService, sans-serif"
+             font-weight="400"
+             font-size="96px"
+             transform="translate(1059.12,407)"
+             id="text1328">/</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
