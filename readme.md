@@ -39,7 +39,35 @@ npm install @testndev/spec-examples-parser
 
 No more chit-chat. 
 
-Let's see a first sample using [Jest](https://jestjs.io/), with TypeScript test file containing:
+Let's see a first sample using [Jest](https://jestjs.io/), with TypeScript test file.
+
+
+```typescript
+import { describe, expect, test } from '@jest/globals';
+import { greetings } from '../src/greetings';
+
+describe(`Our_App is able to greet customers (sample with Jest)`, () => {
+
+  test(`Our_App greets in English by default`, () => {
+    expect(greetings('Tom')).toBe('Hello Tom!');
+  });
+
+  test(`Our_App says 'Bonjour Sébastien !' to 'Sébastien' in french`, () => {
+    const greetingsPhrase = greetings('Sébastien', 'french');
+    expect(greetingsPhrase).toContain('Bonjour');
+    expect(greetingsPhrase).toBe('Bonjour Sébastien !');
+  });
+});
+
+```
+
+You want to iterate the second test, with multiple examples (differents values of names/languages):
+
+| name      | language | greetingWord | expectedPhrase        |
+| --------- | -------- | ------------ | --------------------- |
+| Sébastien | french   | Bonjour      | "Bonjour Sébastien !" |
+| édouard   | english  | Hello        | "Hello Édouard!"      |
+| ROSA      | spanish  | Hola         | "¡Hola Rosa!"         |
 
 Instead of writing this:
 
