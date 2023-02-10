@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { examplesListOfGherkinExamples } from "./examplesListOfGherkinExamples";
