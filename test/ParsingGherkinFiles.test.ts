@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { thenResultEqualsExpectedArray } from './helper/steps';
-import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
+import SpecExamplesParser from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { eatingApplesLeft, eatingCucumberLeft } from './expectedValues';
 
@@ -23,7 +23,7 @@ test.describe('Parsing Gherkin files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromGherkinFeatureFile(inputFilePath);
+            return SpecExamplesParser.fromGherkinFeatureFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -37,7 +37,7 @@ test.describe('Parsing Gherkin files', () => {
       const expectedList = eatingApplesLeft;
       const result = await test.step(`when SpecExamplesParser is asked to parse 2nd examples table of "${inputFilePath}" file`, async () => {
         ReportAttachments.addInputFile(testInfo, inputFilePath);
-        return examples.fromGherkinFeatureFile(inputFilePath, { examplesTableIndex: 2 });
+        return SpecExamplesParser.fromGherkinFeatureFile(inputFilePath, { examplesTableIndex: 2 });
       });
       await thenResultEqualsExpectedArray(testInfo, expectedList, result);
     });
@@ -66,7 +66,7 @@ test.describe('Parsing Gherkin files', () => {
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromGherkinFeatureFile(inputFilePath); };
+          const call = () => { SpecExamplesParser.fromGherkinFeatureFile(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });
@@ -74,7 +74,7 @@ test.describe('Parsing Gherkin files', () => {
     test('asking for nth "examples table" for file not having enough', async ({ }) => {
       const inputFilePath = './test/specexamples/gherkin/two-scenario-outlines.feature';
       const partialErrorMessage = /.*Feature file contains only \d "Scenario Outline".*/;
-      const call = () => { examples.fromGherkinFeatureFile(inputFilePath, { examplesTableIndex: 4 }) };
+      const call = () => { SpecExamplesParser.fromGherkinFeatureFile(inputFilePath, { examplesTableIndex: 4 }) };
       expect(call).toThrow(partialErrorMessage);
     });
   });

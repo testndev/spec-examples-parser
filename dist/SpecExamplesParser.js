@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SpecExamplesParser = void 0;
 var GherkinFeatureFileParser_1 = require("./parsers/GherkinFeatureFileParser");
 var JsonFileParser_1 = require("./parsers/JsonFileParser");
 var DsvFileParser_1 = require("./parsers/DsvFileParser");
@@ -79,5 +78,5 @@ var SpecExamplesParser = /** @class */ (function () {
     };
     return SpecExamplesParser;
 }());
-exports.SpecExamplesParser = SpecExamplesParser;
+exports.default = SpecExamplesParser;
 //# sourceMappingURL=SpecExamplesParser.js.map

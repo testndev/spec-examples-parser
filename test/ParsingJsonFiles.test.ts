@@ -1,6 +1,6 @@
 import { test , expect} from '@playwright/test';
 import { thenResultEqualsExpectedArray } from './helper/steps';
-import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
+import SpecExamplesParser from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { greetingsWithSpaces, simpleAbcValues, emptyList,abzWithOrdersAsNumber } from './expectedValues';
 
@@ -29,7 +29,7 @@ test.describe('Parsing JSON files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromJsonFile(inputFilePath);
+            return SpecExamplesParser.fromJsonFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -51,7 +51,7 @@ test.describe('Parsing JSON files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromJsonFile(inputFilePath);
+            return SpecExamplesParser.fromJsonFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -85,7 +85,7 @@ test.describe('Parsing JSON files', () => {
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromJsonFile(inputFilePath); };
+          const call = () => { SpecExamplesParser.fromJsonFile(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });

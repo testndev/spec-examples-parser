@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
+import { from } from '../src/index';
 import ReportAttachments from './helper/ReportAttachments';
 import { examplesListOfGherkinExamples } from "./examplesListOfGherkinExamples";
 import { greetingsWithSpaces, simpleAbcValues, eatingCucumberLeft, abzWithOrdersAsNumber, eatingApplesLeft, europeanCoutriesInfos } from './expectedValues';
@@ -20,7 +20,7 @@ test.describe('Parsing textual Gherkin Example with magic method', () => {
                 ReportAttachments.addInputText(testInfo, textualInput);
               });
               const result = await test.step('when SpecExamplesParser is asked to convert it to objects\' array', async () => {
-                return examples.from(textualInput);
+                return from(textualInput);
               });
               await test.step('then result is equal to expected (see \'2-expected-result.json\' in attachment)', async () => {
                 await thenResultEqualsExpectedArray(testInfo, expectedList, result);
@@ -86,7 +86,7 @@ test.describe('Parsing files with magic method', () => {
       test(testTitle, async ({ }, testInfo) => {
         const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          return examples.from(inputFilePath);
+          return from(inputFilePath);
         });
         await thenResultEqualsExpectedArray(testInfo, expectedList, result);
       });
@@ -94,7 +94,7 @@ test.describe('Parsing files with magic method', () => {
 
 
   test('Parsing blank text with magic method', async ({ }, testInfo) => {
-    const result = examples.from('   ');
+    const result = from('   ');
     await thenResultEqualsExpectedArray(testInfo, [], result);
   });
 });

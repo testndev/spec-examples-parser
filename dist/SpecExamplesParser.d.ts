@@ -1,5 +1,5 @@
 import { FileParsingOptions, FeatureFileParsingOptions } from './const/FileParsingOptions';
-export declare class SpecExamplesParser {
+declare class SpecExamplesParser {
     /**
      * Intelligent/magic `from()` method that parse any text or file to examples list
      * @param text can be either a "file path" or a raw "examples table" in text format
@@ -28,3 +28,4 @@ export declare class SpecExamplesParser {
        */
     static fromGherkinFormatTable(examplesText: string, parsingOptions?: FileParsingOptions): any;
 }
+export default SpecExamplesParser;

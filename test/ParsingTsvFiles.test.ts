@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SpecExamplesParser as examples } from '../src/SpecExamplesParser';
+import SpecExamplesParser from '../src/SpecExamplesParser';
 import ReportAttachments from './helper/ReportAttachments';
 import { greetingsWithSpaces, simpleAbcValues, firstValueIsEmpty } from './expectedValues';
 import { thenResultEqualsExpectedArray } from './helper/steps';
@@ -25,7 +25,7 @@ test.describe('Parsing TSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromTsvFile(inputFilePath);
+            return SpecExamplesParser.fromTsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -45,7 +45,7 @@ test.describe('Parsing TSV files', () => {
         test(testTitle, async ({ }, testInfo) => {
           const result = await test.step(`when SpecExamplesParser is asked to parse "${inputFilePath}" file`, async () => {
             ReportAttachments.addInputFile(testInfo, inputFilePath);
-            return examples.fromTsvFile(inputFilePath);
+            return SpecExamplesParser.fromTsvFile(inputFilePath);
           });
           await thenResultEqualsExpectedArray(testInfo, expectedList, result);
         });
@@ -69,7 +69,7 @@ test.describe('Parsing TSV files', () => {
       .forEach(({ testTitle, inputFilePath, partialErrorMessage }) => {
         test(testTitle, async ({ }, testInfo) => {
           ReportAttachments.addInputFile(testInfo, inputFilePath);
-          const call = () => { examples.fromTsvFile(inputFilePath); };
+          const call = () => { SpecExamplesParser.fromTsvFile(inputFilePath); };
           expect(call).toThrow(partialErrorMessage);
         });
       });
