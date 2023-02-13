@@ -1,3 +1,4 @@
+import { FileParsingOptions } from "./const/FileParsingOptions";
 import SpecExamplesParser from "./SpecExamplesParser";
 
 function from(text: string, parsingOptions?: FileParsingOptions) {
