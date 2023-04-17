@@ -147,7 +147,7 @@ executing this file will create and execute 3 tests, and return in terminal:
 > You can find more detailed samples in https://github.com/testndev/spec-examples-parser-samples. They are ready to be executed!
 
 
-## Development
+## Contribute
 
 <details>
 <summary><b>Development hints for maintaining and improving @testndev/spec-examples-parser</b></summary>
