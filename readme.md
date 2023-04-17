@@ -7,7 +7,7 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/testndev/spec-examples-parser/ci.yaml)](https://github.com/testndev/spec-examples-parser/actions)
 [![codecov](https://codecov.io/gh/testndev/spec-examples-parser/branch/main/graph/badge.svg?token=MX4BJTNFIN)](https://codecov.io/gh/testndev/spec-examples-parser)
 
-**Specification examples parser for tests written in TypeScript**
+A **specification examples parser for tests written in JavaScript/TypeScript**.
 
 ![](./doc/img/SpExParser-logo.svg)
 
@@ -33,6 +33,22 @@ Tested with those testing frameworks:
 
 ```
 npm install @testndev/spec-examples-parser
+```
+
+## Usage
+
+1. import our lib in each tests suite file
+2. Use our magic **`.from()` method**
+
+```typescript
+import { from } from '@testndev/spec-examples-parser';
+/* ... */
+from(examplesSource) // examplesSource is "Gherkin style text" of a file path
+.forEach((example) => { 
+    test(`${example.id}: test title (example with ${example.a} & ${example.b})`, () => {
+        /* content of your test... */
+    });
+});
 ```
 
 ## Samples
