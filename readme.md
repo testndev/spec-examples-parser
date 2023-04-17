@@ -43,7 +43,7 @@ npm install @testndev/spec-examples-parser
 ```typescript
 import { from } from '@testndev/spec-examples-parser';
 /* ... */
-from(examplesSource) // examplesSource is "Gherkin style text" of a file path
+from(examplesSource) // examplesSource is either a "Gherkin style text" or a file path
 .forEach((example) => { 
     test(`${example.id}: test title (example with ${example.a} & ${example.b})`, () => {
         /* content of your test... */
@@ -148,6 +148,8 @@ executing this file will create and execute 3 tests, and return in terminal:
 
 
 ## Contribute
+
+Supported [version of Node.js](https://github.com/nodejs/release#release-schedule) are: `16.x`/`18.x`/`19.x`.
 
 <details>
 <summary><b>Development hints for maintaining and improving @testndev/spec-examples-parser</b></summary>

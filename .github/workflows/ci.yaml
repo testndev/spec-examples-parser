@@ -1,6 +1,6 @@
 name: spec-examples-parser CI (build + linting + tests + coverage)
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x, 19.x]
+        node-version: [16.x, 18.x, 19.x]
 
     steps:
       - name: Checkout repository
